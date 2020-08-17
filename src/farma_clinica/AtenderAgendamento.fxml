@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="766.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.AtenderAgendamentoController">
+   <children>
+      <TableView fx:id="TBVaTENDIMENTO" layoutX="7.0" layoutY="113.0" onMouseClicked="#setarCampos" prefHeight="356.0" prefWidth="752.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="113.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="66.0" text="ID" />
+          <TableColumn fx:id="NOME" prefWidth="197.0" text=" PACIENTE" />
+            <TableColumn fx:id="DATAAGENDAMENTO" minWidth="2.0" prefWidth="163.0" text="DATA DO AGENDAMENTO" />
+            <TableColumn fx:id="DATACONSULTA" prefWidth="147.0" text="DATA DA CONSULTA" />
+            <TableColumn fx:id="MEDICO" prefWidth="178.0" text="MÉDICO" />
+        </columns>
+         <effect>
+            <ColorAdjust contrast="0.36" />
+         </effect>
+      </TableView>
+      <Label layoutX="255.0" layoutY="94.0" prefHeight="17.0" prefWidth="201.0" text="AGENDAMENTO PARA HOJE" textAlignment="CENTER" textFill="#eeeaea">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="480.0" layoutY="73.0" prefHeight="17.0" prefWidth="33.0" text="Data" textFill="#eeeaea">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <Label layoutX="467.0" layoutY="38.0" prefHeight="17.0" prefWidth="71.0" text="   Médico" textFill="#eeeaea">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="560.0" prefHeight="25.0" prefWidth="71.0" text="Paciente" textFill="#f2eded">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="529.0" prefHeight="17.0" prefWidth="71.0" text="ID" textFill="#fcf9f9" />
+      <JFXTextField fx:id="IdAgenda" layoutX="488.0" layoutY="525.0" prefHeight="25.0" prefWidth="264.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtPaciente" layoutX="488.0" layoutY="560.0" prefHeight="25.0" prefWidth="264.0" style="-fx-background-color: white;" />
+      <JFXComboBox fx:id="cboMedico" layoutX="540.0" layoutY="34.0" onAction="#preencherTabela" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtData" layoutX="540.0" layoutY="69.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: white;" />
+      <JFXButton fx:id="btnAtendimento" layoutX="7.0" layoutY="469.0" onAction="#SalvarEmConsultorio" prefHeight="39.0" prefWidth="752.0" stylesheets="@../css/agenda.css" text="ATENDER" textFill="#fcf9f9" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

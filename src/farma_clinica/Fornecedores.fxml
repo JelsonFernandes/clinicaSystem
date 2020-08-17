@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: FFFAF0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.FornecedoresController">
+   <children>
+      <HBox layoutY="45.0" prefHeight="206.0" prefWidth="800.0" style="-fx-background-color: purple;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
+      <Label layoutX="26.0" layoutY="70.0" prefHeight="24.0" prefWidth="13.0" text="ID" textFill="#fcfafa" />
+      <Label layoutX="183.0" layoutY="69.0" prefHeight="24.0" prefWidth="60.0" text="EMPRESA" textFill="#fcfafa" AnchorPane.leftAnchor="250.0" />
+      <Label layoutX="524.0" layoutY="72.0" prefHeight="17.0" prefWidth="60.0" text="TELEFONE" textFill="#fcfafa" />
+      <Label layoutX="24.0" layoutY="118.0" text="E-MAIL" textFill="#fcfafa" />
+      <Label layoutX="296.0" layoutY="118.0" prefHeight="17.0" prefWidth="60.0" text="PRODUTO" textFill="#fcfafa" />
+      <Label layoutX="527.0" layoutY="118.0" prefHeight="17.0" prefWidth="60.0" text="WEBSITE" textFill="#fcfafa" />
+      <Label layoutX="24.0" layoutY="156.0" text="ENDEREÇO" textFill="#fcfafa" />
+      <TextField fx:id="pesquisaEmpresa" layoutX="26.0" layoutY="249.0" onAction="#PreencherTabela" prefHeight="34.0" prefWidth="350.0" promptText="Digite aqui a tua Pesquisa" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <TableView fx:id="TableViewFornecedor" layoutX="22.0" layoutY="317.0" onMouseClicked="#SetarCamposTabela" prefHeight="237.0" prefWidth="764.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="54.0" text="ID" />
+          <TableColumn fx:id="EMPRESA" prefWidth="145.0" text="EMPRESA" />
+            <TableColumn fx:id="EMAIL" prefWidth="116.0" text="E-MAIL" />
+            <TableColumn fx:id="TELEFONE" prefWidth="122.0" text="TELEFONE" />
+            <TableColumn fx:id="ENDERECO" prefWidth="110.0" text="ENDEREÇO" />
+            <TableColumn fx:id="PRODUTO" prefWidth="103.0" text="PRODUTO" />
+            <TableColumn fx:id="WEBSITE" prefWidth="113.0" text="WEBSITE" />
+        </columns>
+         <effect>
+            <ColorAdjust contrast="0.38" />
+         </effect>
+      </TableView>
+      <JFXTextField fx:id="nomeEmpresa" layoutX="326.0" layoutY="70.0" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="foneEmpresa" layoutX="590.0" layoutY="68.0" prefHeight="25.0" prefWidth="191.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="emailEmpresa" layoutX="96.0" layoutY="114.0" prefHeight="25.0" prefWidth="199.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="90.0" />
+      <JFXTextField fx:id="produtoEmpresa" layoutX="367.0" layoutY="114.0" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="webEmpresa" layoutX="590.0" layoutY="114.0" prefHeight="25.0" prefWidth="191.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="endeEmpresa" layoutX="91.0" layoutY="152.0" prefHeight="25.0" prefWidth="660.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="20.0" />
+      <JFXButton fx:id="btSalvarEmpresa" alignment="CENTER_RIGHT" layoutX="20.0" layoutY="209.0" onAction="#handelerSalvar" prefHeight="40.0" prefWidth="184.0" stylesheets="@../css/fornecedor.css" text="SALVAR" textFill="#f2eeee" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btPesquisarEmpresa" alignment="CENTER_RIGHT" layoutX="183.0" layoutY="209.0" onAction="#handelerBuscar" prefHeight="40.0" prefWidth="191.0" stylesheets="@../css/fornecedor.css" text="PESQUISAR" textFill="#f2eeee" AnchorPane.leftAnchor="183.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btRemoveEmpresa" alignment="CENTER_RIGHT" layoutX="581.0" layoutY="209.0" onAction="#handelerRemover" prefHeight="40.0" prefWidth="206.0" stylesheets="@../css/fornecedor.css" text="REMOVER" textFill="#f2eeee" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btBuscarEmpresa" layoutX="18.0" layoutY="283.0" onAction="#PreencherTabela" prefHeight="34.0" prefWidth="52.0" stylesheets="@../css/fornecedor.css" text="BUSCAR" textFill="#fcf9f9" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="codEmpresa" layoutX="66.0" layoutY="68.0" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="90.0" />
+      <HBox layoutY="29.0" prefHeight="25.0" prefWidth="800.0" style="-fx-background-color: green;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <JFXButton fx:id="btAlteraEmpresa" alignment="CENTER_RIGHT" layoutX="374.0" layoutY="209.0" onAction="#handelerAlterar" prefHeight="40.0" prefWidth="213.0" stylesheets="@../css/fornecedor.css" text="ALTERAR" textFill="#f2eeee">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="45.0" layoutY="211.0">
+         <image>
+            <Image url="@../fotos/cadastro.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="221.0" layoutY="213.0">
+         <image>
+            <Image url="@../fotos/search.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="403.0" layoutY="213.0">
+         <image>
+            <Image url="@../fotos/relatório.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="608.0" layoutY="212.0">
+         <image>
+            <Image url="@../fotos/remover.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="43.0" layoutY="289.0">
+         <image>
+            <Image url="@../fotos/Pesquisar.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="178.0" layoutY="255.0">
+         <image>
+            <Image url="@../fotos/Pesquisar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

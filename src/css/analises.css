@@ -1,0 +1,89 @@
+#AbrirAnalise{
+    -fx-background-color:#8A2BE2;
+
+}
+#AbrirAnalise:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Adicionar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Adicionar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Editar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Editar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Cancelar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Cancelar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Buscar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Buscar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+
+
+
+#BuscamMedico{
+    -fx-background-color:#8A2BE2;
+
+}
+#BuscamMedico:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Deletar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Deletar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Finalizar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Finalizar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#btPesquisa{
+    -fx-background-color:#8A2BE2;
+
+}
+#btPesquisa:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Resultado{
+    -fx-background-color:#EE82EE;
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 5px;
+
+}
+#Resultado:hover{
+    -fx-background-color:#00BFFF;
+     -fx-border-color: white;
+    -fx-border-width: 5px;
+
+}
+
+

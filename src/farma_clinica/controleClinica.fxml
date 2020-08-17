@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ADFF2F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.ControleClinicaController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Relatório">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #98FB98;">
+                     <children>
+                        <JFXTabPane layoutX="9.0" layoutY="13.0" style="-fx-background-color: #ecbaed;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="45.0" text="TOTAL DE PACIENTES ATENDIDOS DURANTE O ANO" textFill="#fffbfb" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <JFXTextArea fx:id="criAtendidas" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="14.0" layoutY="90.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="&#10;&#10;                  0" unFocusColor="#eb09cd" AnchorPane.leftAnchor="20.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="joAtendidos" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="213.0" layoutY="90.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="                &#10;&#10;                 0" unFocusColor="#eb09cd">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="aduAtendidos" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="413.0" layoutY="90.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="&#10;&#10;                  0" unFocusColor="#eb09cd">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="idoAtendidos" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="569.0" layoutY="90.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="   &#10;&#10;                0" unFocusColor="#eb09cd" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="criRecuperadas" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="14.0" layoutY="236.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="                 &#10;&#10;                 0" unFocusColor="#eb09cd" AnchorPane.leftAnchor="20.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="joRecuperados" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="213.0" layoutY="236.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="                &#10;&#10;                 0" unFocusColor="#eb09cd">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="aduRecuperados" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="413.0" layoutY="236.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="                &#10;&#10;                 0" unFocusColor="#eb09cd">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="idoRecuperados" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="569.0" layoutY="236.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="                 &#10;&#10;                  0" unFocusColor="#eb09cd" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="criFalecidas" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="57.0" layoutY="398.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="                 &#10;&#10;                  0" unFocusColor="#eb09cd" AnchorPane.leftAnchor="20.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="joFalecidos" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="213.0" layoutY="398.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="                 &#10;&#10;                 0" unFocusColor="#eb09cd">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="aduFalecidos" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="413.0" layoutY="398.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="                 &#10;&#10;                 0" unFocusColor="#eb09cd">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <JFXTextArea fx:id="idoFalecidos" editable="false" focusColor="#405aa8" labelFloat="true" layoutX="612.0" layoutY="398.0" prefHeight="99.0" prefWidth="168.0" style="-fx-background-color: white;" text="                 &#10;&#10;                 0" unFocusColor="#eb09cd">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></JFXTextArea>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="211.0" text="TOTAL DE PACIENTES RECUPERADOS DURANTE O ANO" textFill="#fffbfb" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="354.0" text="TOTAL DE PACIENTES FALECIDOS DURANTE O ANO" textFill="#fffbfb" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label fx:id="dataLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="640.0" layoutY="23.0" prefHeight="31.0" prefWidth="144.0" style="-fx-background-color: white;" text="Data" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Gráfico do Relatório Anual">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ecbaed;">
+                     <children>
+                        <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <PieChart fx:id="graficoPacientes" layoutX="14.0" layoutY="14.0" prefHeight="260.0" prefWidth="380.0" style="-fx-background-color: white;" title="PACIENTES ATENDIDOS" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="406.0" AnchorPane.topAnchor="14.0" />
+                        <PieChart fx:id="graficoPacientesRecuperados" layoutX="447.0" prefHeight="260.0" prefWidth="380.0" style="-fx-background-color: white;" title="PACIENTES  RECUPERADOS" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0" />
+                        <PieChart fx:id="graficoPacientesFalecidos" layoutX="219.0" layoutY="286.0" prefHeight="260.0" prefWidth="380.0" style="-fx-background-color: white;" title="PACIENTES FALECIDOS" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Gráfico do Relatório Mensal">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ecbaed;">
+                     <children>
+                        <HBox layoutX="431.0" layoutY="475.0" prefHeight="78.0" prefWidth="349.0" style="-fx-background-color: #32CD32;" AnchorPane.leftAnchor="431.0" AnchorPane.rightAnchor="20.0" />
+                        <HBox layoutX="431.0" layoutY="396.0" prefHeight="79.0" prefWidth="349.0" style="-fx-background-color: #98FB98;" AnchorPane.leftAnchor="431.0" AnchorPane.rightAnchor="20.0" />
+                        <HBox layoutX="429.0" layoutY="295.0" prefHeight="100.0" prefWidth="349.0" style="-fx-background-color: #00FA9A;" AnchorPane.leftAnchor="431.0" AnchorPane.rightAnchor="20.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="334.0" text="PACIENTES ATENDIDOS" textAlignment="CENTER" textFill="#0c3bed">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <BarChart fx:id="Atendidos" layoutX="20.0" layoutY="31.0" prefHeight="263.0" prefWidth="390.0" style="-fx-background-color: #98FB98;" title="PACIENTES ATENDIDOS" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="31.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="y" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" fx:id="x" />
+                          </yAxis>
+                        </BarChart>
+                        <BarChart fx:id="Recuperados" layoutX="425.0" layoutY="31.0" prefHeight="263.0" prefWidth="390.0" style="-fx-background-color: #98FB98;" title="PACIENTES RECUPERADOS" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="31.0">
+                           <xAxis>
+                              <CategoryAxis fx:id="yr" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" fx:id="xr" />
+                           </yAxis>
+                        </BarChart>
+                        <BarChart fx:id="Falecidos" layoutX="20.0" layoutY="294.0" prefHeight="263.0" prefWidth="390.0" style="-fx-background-color: #32CD32;" title="PACIENTES FALECIDOS" AnchorPane.leftAnchor="20.0">
+                           <xAxis>
+                              <CategoryAxis fx:id="yf" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" fx:id="xf" />
+                           </yAxis>
+                        </BarChart>
+                        <Label layoutX="350.0" layoutY="14.0" prefHeight="17.0" prefWidth="114.0" text="SELECIONA O MÉS" />
+                        <JFXComboBox fx:id="MesSelect" layoutX="330.0" layoutY="31.0" onAction="#ChamarGraficoMesal" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: CYAN;" />
+                        <JFXTextField fx:id="atendAdole" layoutX="617.0" layoutY="312.0" prefHeight="25.0" prefWidth="163.0" AnchorPane.rightAnchor="20.0" />
+                        <JFXTextField fx:id="atendCriancas" layoutX="432.0" layoutY="312.0" prefHeight="25.0" prefWidth="161.0" AnchorPane.rightAnchor="207.0" />
+                        <JFXTextField fx:id="atendIdoso" layoutX="617.0" layoutY="345.0" prefHeight="25.0" prefWidth="163.0" AnchorPane.rightAnchor="20.0" />
+                        <JFXTextField fx:id="atendAdult" layoutX="432.0" layoutY="345.0" prefHeight="25.0" prefWidth="161.0" AnchorPane.rightAnchor="207.0" />
+                        <JFXTextField fx:id="recapAdolc" layoutX="617.0" layoutY="413.0" prefHeight="25.0" prefWidth="163.0" AnchorPane.rightAnchor="20.0" />
+                        <JFXTextField fx:id="recapCrianc" layoutX="432.0" layoutY="413.0" prefHeight="25.0" prefWidth="161.0" AnchorPane.rightAnchor="207.0" />
+                        <JFXTextField fx:id="recapIdoso" layoutX="617.0" layoutY="438.0" prefHeight="25.0" prefWidth="163.0" AnchorPane.rightAnchor="20.0" />
+                        <JFXTextField fx:id="recapAdult" layoutX="432.0" layoutY="438.0" prefHeight="25.0" prefWidth="161.0" AnchorPane.rightAnchor="207.0" />
+                        <JFXTextField fx:id="falcAdole" layoutX="616.0" layoutY="490.0" prefHeight="25.0" prefWidth="163.0" AnchorPane.rightAnchor="21.0" />
+                        <JFXTextField fx:id="falcCrianca" layoutX="431.0" layoutY="490.0" prefHeight="25.0" prefWidth="161.0" AnchorPane.rightAnchor="208.0" />
+                        <JFXTextField fx:id="falecIdoso" layoutX="445.0" layoutY="515.0" prefHeight="25.0" prefWidth="163.0" AnchorPane.rightAnchor="20.0" />
+                        <JFXTextField fx:id="falecAdult" layoutX="432.0" layoutY="515.0" prefHeight="25.0" prefWidth="161.0" AnchorPane.rightAnchor="207.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="393.0" prefHeight="17.0" prefWidth="351.0" text="PACIENTES RECUPERADOS" textAlignment="CENTER" textFill="#072ded">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="424.0" layoutY="473.0" prefHeight="17.0" prefWidth="351.0" text="PACIENTES FALECIDOS" textAlignment="CENTER" textFill="#d5ed09">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

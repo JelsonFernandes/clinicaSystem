@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="stylehb" prefHeight="700.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.MainFormController">
+  <children>
+    <SplitPane id="stylespline" dividerPositions="0.2505567928730512, 0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="258.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane fx:id="CliPane" layoutX="114.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="57.0" style="-fx-background-color: BEIGE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <HBox layoutX="7.0" layoutY="3.0" maxHeight="-Infinity" opacity="0.28" prefHeight="617.0" prefWidth="74.0" style="-fx-background-color: violet;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <HBox layoutY="3.0" prefHeight="367.0" prefWidth="66.0" style="-fx-background-color: violet;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="0.0">
+                           <effect>
+                              <DropShadow />
+                           </effect></HBox>
+                        <JFXButton fx:id="menucad" alignment="BOTTOM_LEFT" layoutX="64.0" layoutY="93.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#AbrirMenuCadastro" prefHeight="30.0" prefWidth="90.0" stylesheets="@../css/StyleSheet.css" text="CADASTRO" textFill="#b00bb9" AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="-4.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="menuConsu" alignment="BOTTOM_LEFT" layoutX="92.0" layoutY="121.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#AbrirMenuConsulta" prefHeight="30.0" prefWidth="90.0" stylesheets="@../css/StyleSheet.css" text="CONSULTAS" textFill="#b00bb9" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="menuFarm" alignment="BOTTOM_LEFT" layoutX="102.0" layoutY="221.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#AbrirMenuFarmacia" prefHeight="30.0" prefWidth="90.0" stylesheets="@../css/StyleSheet.css" text="FARMÁCIA" textFill="#b00bb9" AnchorPane.bottomAnchor="330.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="menuRel" alignment="BOTTOM_LEFT" layoutX="104.0" layoutY="361.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="90.0" stylesheets="@../css/StyleSheet.css" text="RELATÓRIOS" textFill="#b00bb9" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="400.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="menuVis" alignment="BOTTOM_LEFT" layoutX="112.0" layoutY="506.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#AbrirVisao" prefHeight="30.0" prefWidth="90.0" stylesheets="@../css/StyleSheet.css" text="VISÃO" textFill="#b00bb9" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="menuSair" alignment="BOTTOM_LEFT" layoutX="112.0" layoutY="543.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#HandlercontroleMainForm" prefHeight="37.0" prefWidth="90.0" stylesheets="@../css/StyleSheet.css" text="SAIR" textFill="#b00bb9" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="menuFin" alignment="BOTTOM_LEFT" layoutX="68.0" layoutY="290.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#HandlerFinancas" prefHeight="30.0" prefWidth="190.0" stylesheets="@../css/StyleSheet.css" text="FINANÇAS" textFill="#b00bb9" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="60.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="14.0" layoutY="93.0" AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="14.0">
+                           <image>
+                              <Image url="@../fotos/cadastro_preto.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView layoutX="14.0" layoutY="118.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="10.0">
+                           <image>
+                              <Image url="@../fotos/diagnostics.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="53.0" fitWidth="50.0" layoutX="8.0" layoutY="213.0" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="10.0">
+                           <image>
+                              <Image url="@../fotos/farmacia.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="50.0" layoutX="8.0" layoutY="357.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="400.0">
+                           <image>
+                              <Image url="@../fotos/report.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="38.0" fitWidth="50.0" layoutX="65.0" layoutY="297.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="10.0">
+                           <image>
+                              <Image url="@../fotos/finança.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView layoutX="25.0" layoutY="551.0">
+                           <image>
+                              <Image url="@../fotos/back.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView layoutX="334.0" layoutY="488.0">
+                           <image>
+                              <Image url="@../fotos/eye.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="49.0" layoutX="11.0" layoutY="458.0" AnchorPane.bottomAnchor="100.0">
+                           <image>
+                              <Image url="@../fotos/eye.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnEmpresa" alignment="BOTTOM_LEFT" layoutX="66.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#AbrirEmpresa" prefHeight="30.0" prefWidth="190.0" stylesheets="@../css/StyleSheet.css" text="EMPRESA" textFill="#cd46cd" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <ImageView layoutX="18.0" layoutY="40.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="20.0">
+                           <image>
+                              <Image url="@../fotos/house.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <JFXToolbar layoutX="23.0" onMouseClicked="#FechararMenu" prefHeight="62.0" prefWidth="240.0" style="-fx-background-color: #EE82EE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-23.0" AnchorPane.topAnchor="0.0" />
+                  <JFXHamburger fx:id="MenuHamburger" layoutX="11.0" layoutY="8.0" onMouseClicked="#ChamarMenu" prefHeight="46.0" prefWidth="50.0" stylesheets="@../css/StyleSheet.css" />
+                  <Label fx:id="user" alignment="CENTER" layoutX="61.0" layoutY="197.0" prefHeight="20.0" prefWidth="190.0" text="USUÁRIO" textFill="#6810da">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="jfxLabNif" layoutX="73.0" layoutY="270.0" prefHeight="17.0" prefWidth="177.0" text="NIF" textFill="#6810da">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Number" layoutX="73.0" layoutY="340.0" prefHeight="17.0" prefWidth="177.0" text="Number" textFill="#6810da">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Website" layoutX="76.0" layoutY="290.0" prefHeight="17.0" prefWidth="177.0" text="website" textFill="#6810da" AnchorPane.bottomAnchor="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="LogoImage" fitHeight="100.0" fitWidth="100.0" layoutX="105.0" layoutY="74.0" pickOnBounds="true" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+        </AnchorPane>
+            <HBox opacity="0.29" prefHeight="100.0" prefWidth="236.0" style="-fx-background-color: violet;" />
+        <AnchorPane fx:id="menuBarEmpresa" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#FechararMenu" prefHeight="677.0" prefWidth="800.0" style="-fx-background-color: white;" stylesheets="@../css/StyleSheet.css">
+               <children>
+                  <Label fx:id="empresa" alignment="CENTER" contentDisplay="CENTER" layoutX="-19.0" layoutY="141.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="800.0" textAlignment="CENTER" textFill="#f5f3f3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
+                  <ImageView fitHeight="269.0" fitWidth="742.0" layoutX="-9.0" layoutY="482.0" AnchorPane.bottomAnchor="308.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0">
+                     <image>
+                        <Image url="@../fotos/ClinicaHeart.jpg" />
+                     </image>
+                  </ImageView>
+                  <JFXToolbar id="anchorBar" layoutX="5.0" onMouseClicked="#FechararMenu" prefHeight="62.0" prefWidth="800.0" style="-fx-background-color: #EE82EE;" stylesheets="@../css/StyleSheet.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+                     <left>
+                        <AnchorPane fx:id="menuBarEmpresa" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="800.0" stylesheets="@../css/StyleSheet.css" visible="false" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="btnEmpresa2" alignment="CENTER_RIGHT" layoutX="26.0" onAction="#HandlerEmpresa" prefHeight="62.0" prefWidth="258.0" stylesheets="@../css/StyleSheet.css" text="CADASTRO DA EMPRESA" textFill="#f5f4f4" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="btnFuncionarios" alignment="CENTER_RIGHT" layoutX="264.0" onAction="#HandlerFuncionarios" prefHeight="62.0" prefWidth="292.0" stylesheets="@../css/StyleSheet.css" text="CADASTRO DE FUNCIONÁRIOS" textFill="#f5eeee" AnchorPane.leftAnchor="264.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <ImageView layoutX="39.0" layoutY="16.0">
+                                 <image>
+                                    <Image url="@../fotos/house.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="286.0" layoutY="7.0">
+                                 <image>
+                                    <Image url="@../fotos/download%20(1).jpg" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="btnServicos" alignment="CENTER_RIGHT" layoutX="556.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#HandlerServicos" prefHeight="62.0" prefWidth="145.0" stylesheets="@../css/StyleSheet.css" text="SERVIÇOS" textFill="#f8f6f8" AnchorPane.leftAnchor="556.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="574.0" layoutY="16.0" AnchorPane.leftAnchor="574.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@../fotos/fix.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </left></JFXToolbar>
+                  <ImageView fitHeight="367.0" fitWidth="724.0" layoutX="15.0" layoutY="313.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="33.0">
+                     <image>
+                        <Image url="@../fotos/nurse-2141808_1920.jpg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="menBar" layoutX="-8.0" layoutY="62.0" prefHeight="62.0" prefWidth="213.0" stylesheets="@../css/StyleSheet.css" visible="false" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton fx:id="Paciente" alignment="CENTER_RIGHT" layoutX="298.0" layoutY="-2.0" minHeight="62.0" onAction="#HandlerPacientes" prefHeight="62.0" prefWidth="107.0" stylesheets="@../css/StyleSheet.css" text="PACIENTES" textFill="#f2efef" AnchorPane.topAnchor="-2.0">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="Cliente" alignment="CENTER_RIGHT" layoutX="537.0" layoutY="-2.0" onAction="#HandlerClientes" prefHeight="62.0" prefWidth="90.0" stylesheets="@../css/StyleSheet.css" text="CLIENTES" textFill="#f5f3f3" AnchorPane.topAnchor="-2.0">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="Fornecedor" alignment="CENTER_RIGHT" layoutX="404.0" layoutY="1.0" minWidth="0.0" onAction="#HandlerFronecedor" prefHeight="62.0" prefWidth="129.0" stylesheets="@../css/StyleSheet.css" text="FORNECEDORES" textFill="#eeeaea" AnchorPane.topAnchor="1.0">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="Medico" alignment="CENTER_RIGHT" layoutX="220.0" layoutY="-2.0" minHeight="62.0" onAction="#HandlerMedicos" prefHeight="62.0" prefWidth="78.0" stylesheets="@../css/StyleSheet.css" text="MÉDICO" textFill="#f8f6f6" AnchorPane.topAnchor="-2.0">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="Enfermeiros" alignment="CENTER_RIGHT" layoutX="99.0" layoutY="-2.0" minHeight="62.0" onAction="#HandlerEnfermeiros" prefHeight="62.0" prefWidth="121.0" stylesheets="@../css/StyleSheet.css" text="ENFERMEIROS" textFill="#f2eded" AnchorPane.topAnchor="-2.0">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnUsuario" alignment="CENTER_RIGHT" contentDisplay="RIGHT" minHeight="62.0" onAction="#HandlerMenuItemUsuario" prefHeight="62.0" prefWidth="100.0" stylesheets="@../css/StyleSheet.css" text="USUÁRIOS" textFill="#fcf6f6" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font></JFXButton>
+                        <ImageView fitHeight="43.0" fitWidth="30.0" layoutX="415.0" layoutY="8.0">
+                           <image>
+                              <Image url="@../fotos/fornecedor.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="30.0" layoutX="537.0" layoutY="8.0">
+                           <image>
+                              <Image url="@../fotos/sellpoint.jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnProdutos" alignment="CENTER_RIGHT" layoutX="615.0" layoutY="1.0" onAction="#HandlerProdutos" prefHeight="62.0" prefWidth="129.0" stylesheets="@../css/StyleSheet.css" text="PRODUTOS" textFill="#fcfafa" AnchorPane.topAnchor="1.0">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font></JFXButton>
+                        <ImageView fitHeight="37.0" fitWidth="30.0" layoutX="11.0" layoutY="13.0">
+                           <image>
+                              <Image url="@../fotos/usuário.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="37.0" layoutX="109.0" layoutY="6.0">
+                           <image>
+                              <Image url="@../fotos/doctor_female_icon-icons.com_75050.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="37.0" layoutX="220.0" layoutY="9.0">
+                           <image>
+                              <Image url="@../fotos/doctor_male_icon-icons.com_75051.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="37.0" layoutX="304.0" layoutY="10.0">
+                           <image>
+                              <Image url="@../fotos/paciente.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="30.0" layoutX="638.0" layoutY="9.0">
+                           <image>
+                              <Image url="@../fotos/medicamentos.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="nenuBarCunsulta" layoutX="15.0" layoutY="62.0" prefHeight="62.0" prefWidth="200.0" stylesheets="@../css/StyleSheet.css" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton fx:id="Agendar" alignment="CENTER_RIGHT" layoutX="26.0" onAction="#HandlerAgenda" prefHeight="62.0" prefWidth="145.0" stylesheets="@../css/StyleSheet.css" text="AGENDAR" textFill="#f5f4f4" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <ImageView fitHeight="46.0" fitWidth="49.0" layoutX="33.0" layoutY="8.0">
+                           <image>
+                              <Image url="@../fotos/agenda.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="Atender" alignment="CENTER_RIGHT" layoutX="187.0" layoutY="19.0" onAction="#HandlerAtenderAgenda" prefHeight="62.0" prefWidth="145.0" stylesheets="@../css/StyleSheet.css" text="ATENDER " textFill="#f5eeee" AnchorPane.leftAnchor="187.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <ImageView fitHeight="46.0" fitWidth="49.0" layoutX="194.0" layoutY="8.0">
+                           <image>
+                              <Image url="@../fotos/paciente.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="Consultar" alignment="CENTER_RIGHT" layoutX="332.0" layoutY="19.0" onAction="#HandlerConsultorio" prefHeight="62.0" prefWidth="145.0" stylesheets="@../css/StyleSheet.css" text="CONSULTAR" textFill="#f8f4f4" AnchorPane.leftAnchor="332.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="43.0" fitWidth="49.0" layoutX="336.0" layoutY="8.0">
+                           <image>
+                              <Image url="@../fotos/doctor_male_icon-icons.com_75051.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="Laboratorio" alignment="CENTER_RIGHT" layoutX="477.0" layoutY="19.0" onAction="#HandlerLaboratorio" prefHeight="62.0" prefWidth="150.0" text="LABORATÓRIO" textFill="#fcf9f9" AnchorPane.leftAnchor="477.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <ImageView fitWidth="37.0" layoutX="477.0" layoutY="10.0">
+                           <image>
+                              <Image url="@../fotos/diagnostics.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="menBarFarmacia" prefHeight="62.0" prefWidth="809.0" stylesheets="@../css/StyleSheet.css" visible="false">
+                     <children>
+                        <JFXButton fx:id="btnMedicamentos" alignment="CENTER_RIGHT" contentDisplay="RIGHT" minHeight="62.0" onAction="#HandlerProdutos" prefHeight="62.0" prefWidth="200.0" stylesheets="@../css/StyleSheet.css" text="MEDICAMENTOS" textFill="#fcf6f6" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnPontoVenda" alignment="CENTER_RIGHT" layoutX="200.0" minHeight="62.0" onAction="#HandlerFarmacia" prefHeight="62.0" prefWidth="200.0" stylesheets="@../css/StyleSheet.css" text="PONTO DE VENDA" textFill="#f2eded" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="46.0" fitWidth="49.0" layoutX="26.0" layoutY="8.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="734.0" AnchorPane.topAnchor="8.0">
+                           <image>
+                              <Image url="@../fotos/medicamentos.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView layoutX="232.0" layoutY="10.0">
+                           <image>
+                              <Image url="@../fotos/sale.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="Visao" layoutX="-301.0" layoutY="282.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="800.0" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton fx:id="btnTatalidade" alignment="CENTER_RIGHT" layoutX="14.0" onAction="#HandlercontroleNatalidade" prefHeight="62.0" prefWidth="177.0" stylesheets="@../css/StyleSheet.css" text="NATALIDADE" textFill="#f5f4f4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="btnRelatorio" alignment="CENTER_RIGHT" layoutX="368.0" onAction="#HandlercontroleClinica" prefHeight="62.0" prefWidth="177.0" stylesheets="@../css/StyleSheet.css" text="ÍNDICE" textFill="#f5f4f4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="btnMortalidade" alignment="CENTER_RIGHT" layoutX="191.0" onAction="#HandlercontroleMortalidade" prefHeight="62.0" prefWidth="177.0" stylesheets="@../css/StyleSheet.css" text="MORTALIDADE" textFill="#f5f4f4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="btnGrafico" alignment="CENTER_RIGHT" layoutX="545.0" onAction="#HandlercontroleNatalMortalidade" prefHeight="62.0" prefWidth="177.0" stylesheets="@../css/StyleSheet.css" text="ÍNDICE ANUAL" textFill="#f5f4f4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                     </children></AnchorPane>
+               </children></AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" style="-fx-background-color: purple;" text="INFOTOKES" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: green;" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" style="-fx-background-color: purple;" text="DESIGNER" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>

@@ -1,0 +1,41 @@
+#btSalvarEmpresa{
+    -fx-background-color:#8A2BE2;
+
+}
+#btSalvarEmpresa:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#btPesquisarEmpresa{
+    -fx-background-color:#8A2BE2;
+
+}
+#btPesquisarEmpresa:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#btAlteraEmpresa{
+    -fx-background-color:#8A2BE2;
+
+}
+#btAlteraEmpresa:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#btRemoveEmpresa{
+    -fx-background-color:#8A2BE2;
+
+}
+#btRemoveEmpresa:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#btBuscarEmpresa{
+    -fx-background-color:#8A2BE2;
+
+}
+#btBuscarEmpresa:hover{
+    -fx-background-color:#00BFFF;
+
+}
+

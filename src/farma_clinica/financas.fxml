@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.FinancasController">
+   <children>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="RECEITAS &amp; DESPESAS">
+            <content>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="831.0">
+                     <children>
+                    <AnchorPane prefHeight="575.0" prefWidth="830.0" AnchorPane.bottomAnchor="-236.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="29.0" layoutY="52.0" text="ID" />
+                              <Label layoutX="608.0" layoutY="51.0" text="DATA:" />
+                              <Label layoutX="29.0" layoutY="133.0" prefHeight="17.0" prefWidth="41.0" text="VALOR" />
+                              <Label layoutX="224.0" layoutY="132.0" prefHeight="17.0" prefWidth="74.0" text="DESCRIÇÃO:" />
+                              <Label layoutX="498.0" layoutY="133.0" prefHeight="17.0" prefWidth="80.0" text="FINALIDADE:" />
+                              <TextField fx:id="UseReceita" layoutX="280.0" layoutY="48.0" prefHeight="25.0" prefWidth="269.0" />
+                              <TextField fx:id="ValorReceita" layoutX="82.0" layoutY="129.0" prefHeight="25.0" prefWidth="109.0" />
+                              <TextField fx:id="FinalReceita" layoutX="575.0" layoutY="129.0" prefHeight="25.0" prefWidth="227.0" />
+                              <ComboBox fx:id="DescriReceita" layoutX="297.0" layoutY="128.0" prefHeight="25.0" prefWidth="158.0" />
+                              <TableView fx:id="TBVRECEITASdESPESA" layoutX="29.0" layoutY="293.0" onMouseClicked="#HendelerSetarCampos" prefHeight="241.0" prefWidth="773.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0">
+                                <columns>
+                                  <TableColumn fx:id="ID" prefWidth="105.00000381469727" text="ID" />
+                                  <TableColumn fx:id="USUARIO" prefWidth="186.99998474121094" text="USUÁIO" />
+                                    <TableColumn fx:id="DATA" minWidth="0.0" prefWidth="77.0" text="DATA" />
+                                    <TableColumn fx:id="VALOR" minWidth="0.0" prefWidth="123.0" text="VALOR" />
+                                    <TableColumn fx:id="DESCRICAO" minWidth="0.0" prefWidth="132.0" text="DESCRIÇÃO" />
+                                    <TableColumn fx:id="FINALIDADE" minWidth="0.0" prefWidth="148.0" text="FINALIDADE" />
+                                </columns>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TableView>
+                              <Button fx:id="btBusca" layoutX="28.0" layoutY="262.0" mnemonicParsing="false" onAction="#preencherTabela" prefHeight="31.0" prefWidth="773.0" text="BUSCAR DADOS" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect></Button>
+                              <TextField fx:id="txtPesquisa" layoutX="33.0" layoutY="231.0" onAction="#preencherTabela" prefHeight="31.0" prefWidth="773.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" />
+                              <Button fx:id="btAdiciona" layoutX="29.0" layoutY="191.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#adicionar" prefHeight="40.0" prefWidth="193.25" text="ADICIONAR">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect></Button>
+                              <Button fx:id="btPesquisa" layoutX="223.0" layoutY="191.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#PesqActionPerformed" prefHeight="40.0" prefWidth="193.25" text="PESQUISAR">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect></Button>
+                              <Button fx:id="btAltera" layoutX="417.0" layoutY="191.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#alterar" prefHeight="40.0" prefWidth="193.25" text="ALTERAR">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect></Button>
+                              <Button fx:id="btRemove" layoutX="609.0" layoutY="191.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeReceDespesa" prefHeight="40.0" prefWidth="193.25" text="REMOVER" AnchorPane.rightAnchor="28.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect></Button>
+                              <ImageView fitHeight="38.0" fitWidth="54.0" layoutX="35.0" layoutY="192.0">
+                                 <image>
+                                    <Image url="@../fotos/cadastro.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="228.0" layoutY="194.0">
+                                 <image>
+                                    <Image url="@../fotos/search.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="41.0" fitWidth="44.0" layoutX="420.0" layoutY="191.0">
+                                 <image>
+                                    <Image url="@../fotos/relatório.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="38.0" fitWidth="45.0" layoutX="612.0" layoutY="193.0">
+                                 <image>
+                                    <Image url="@../fotos/remover.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="38.0" layoutX="730.0" layoutY="267.0">
+                                 <image>
+                                    <Image url="@../fotos/Pesquisar.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="52.0" layoutY="236.0">
+                                 <image>
+                                    <Image url="@../fotos/Pesquisar.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="DataReceita" layoutX="663.0" layoutY="49.0" prefHeight="24.0" prefWidth="111.0" />
+                              <JFXButton layoutX="165.0" layoutY="49.0" onAction="#UsuActionPerformed" prefHeight="25.0" prefWidth="103.0" text="Usuário" />
+                              <JFXTextField fx:id="codReceita" layoutX="50.0" layoutY="49.0" />
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="DIVIDAS A PAGAR &amp; A RECEBER">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TBVRECEITASdESPESA1" layoutX="30.0" layoutY="301.0" onMouseClicked="#SetarCamposDividas" prefHeight="241.0" prefWidth="773.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="28.0">
+                           <columns>
+                              <TableColumn fx:id="ID1" prefWidth="87.9999885559082" text="ID" />
+                              <TableColumn fx:id="USUARIO1" prefWidth="129.0" text="USUÁIO" />
+                              <TableColumn fx:id="DATA1" minWidth="0.0" prefWidth="62.0" text="DATA" />
+                              <TableColumn fx:id="VALOR1" minWidth="0.0" prefWidth="68.0" text="VALOR" />
+                              <TableColumn fx:id="DESCRICAO1" minWidth="0.0" prefWidth="76.0" text="DESCRIÇÃO" />
+                              <TableColumn fx:id="FINALIDADE1" minWidth="0.0" prefWidth="84.0" text="FINALIDADE" />
+                              <TableColumn fx:id="LIQUIDAR" minWidth="0.0" prefWidth="95.0" text="LIQUIDAR EM:" />
+                              <TableColumn fx:id="LIQUIDADO" minWidth="0.0" prefWidth="97.0" text="LIQUIDADO EM:" />
+                              <TableColumn fx:id="SITUACAO" minWidth="0.0" prefWidth="78.0" text="SITUAÇÃO" />
+                           </columns>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TableView>
+                        <Button fx:id="btBusca1" layoutX="29.0" layoutY="262.0" mnemonicParsing="false" onAction="#preencheTabelaDivida" prefHeight="31.0" prefWidth="773.0" text="BUSCAR DADOS" AnchorPane.leftAnchor="29.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <TextField fx:id="txtPesquisa1" layoutX="29.0" layoutY="231.0" onAction="#preencheTabelaDivida" prefHeight="31.0" prefWidth="773.0" AnchorPane.leftAnchor="29.0" />
+                        <Button fx:id="btAdiciona1" layoutX="29.0" layoutY="189.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#adicionaDivida" prefHeight="40.0" prefWidth="193.25" text="ADICIONAR">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="btPesquisa1" layoutX="221.0" layoutY="189.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#jButtonPesq1ActionPerformed" prefHeight="40.0" prefWidth="193.25" text="PESQUISAR">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="btAltera1" layoutX="415.0" layoutY="189.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#alterarDivida" prefHeight="40.0" prefWidth="193.25" text="ALTERAR">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="btRemove1" layoutX="608.0" layoutY="189.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeDivida" prefHeight="40.0" prefWidth="193.25" text="REMOVER" AnchorPane.rightAnchor="29.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Label layoutX="29.0" layoutY="21.0" text="ID" />
+                        <TextField fx:id="codDivida" layoutX="54.0" layoutY="17.0" prefHeight="25.0" prefWidth="130.0" />
+                        <TextField fx:id="UseDivida" layoutX="263.0" layoutY="17.0" prefHeight="25.0" prefWidth="306.0" />
+                        <Label layoutX="592.0" layoutY="21.0" text="DATA:" />
+                        <TextField fx:id="DataDivida" layoutX="652.0" layoutY="17.0" AnchorPane.rightAnchor="29.0" />
+                        <Label layoutX="29.0" layoutY="76.0" prefHeight="17.0" prefWidth="41.0" text="VALOR" />
+                        <TextField fx:id="ValorDivida" layoutX="72.0" layoutY="72.0" prefHeight="25.0" prefWidth="109.0" />
+                        <Label layoutX="212.0" layoutY="76.0" prefHeight="17.0" prefWidth="74.0" text="DESCRIÇÃO:" />
+                        <ComboBox fx:id="DescriDivida" layoutX="303.0" layoutY="72.0" prefHeight="25.0" prefWidth="149.0" />
+                        <Label layoutX="472.0" layoutY="76.0" prefHeight="17.0" prefWidth="80.0" text="FINALIDADE:" />
+                        <TextField fx:id="FinalDivida" layoutX="565.0" layoutY="72.0" prefHeight="25.0" prefWidth="237.0" AnchorPane.rightAnchor="29.0" />
+                        <Label layoutX="303.0" layoutY="127.0" prefHeight="17.0" prefWidth="91.0" text="LIQUIDADO EM:" />
+                        <Label layoutX="27.0" layoutY="127.0" text="A LIQUIDAR EM:" />
+                        <Label layoutX="560.0" layoutY="127.0" prefHeight="17.0" prefWidth="64.0" text="SITUAÇÃO:" />
+                        <TextField fx:id="dataAliquidarDivida" layoutX="119.0" layoutY="123.0" prefHeight="25.0" prefWidth="175.0" />
+                        <TextField fx:id="dataLiquidadoDivida" layoutX="398.0" layoutY="123.0" />
+                        <ComboBox fx:id="situacaoDivida" layoutX="629.0" layoutY="123.0" prefHeight="25.0" prefWidth="169.0" AnchorPane.rightAnchor="29.0" />
+                        <ImageView fitHeight="20.0" fitWidth="27.0" layoutX="691.0" layoutY="268.0">
+                           <image>
+                              <Image url="@../fotos/Pesquisar.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="43.0" layoutY="235.0">
+                           <image>
+                              <Image url="@../fotos/Pesquisar.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="37.0" layoutY="189.0">
+                           <image>
+                              <Image url="@../fotos/cadastro.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="231.0" layoutY="193.0">
+                           <image>
+                              <Image url="@../fotos/search.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="424.0" layoutY="192.0">
+                           <image>
+                              <Image url="@../fotos/relatório.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="610.0" layoutY="188.0">
+                           <image>
+                              <Image url="@../fotos/remover.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="186.0" layoutY="17.0" mnemonicParsing="false" onAction="#UsuAction" prefHeight="25.0" prefWidth="73.0" text="USUÁRIO" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="TOTAL DE RECEITAS &amp; DESPESAS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: WHITE;">
+                     <children>
+                        <JFXTabPane layoutX="6.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <HBox layoutY="184.0" prefHeight="31.0" prefWidth="200.0" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="184.0" />
+                        <HBox layoutX="366.0" layoutY="188.0" prefHeight="26.0" prefWidth="452.0" style="-fx-background-color: YELLOW;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+                        <HBox layoutX="11.0" layoutY="10.0" prefHeight="74.0" prefWidth="830.0" style="-fx-background-color: PURPLE;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+                        <HBox layoutX="390.0" layoutY="345.0" prefHeight="209.0" prefWidth="429.0" style="-fx-background-color: PURPLE;" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="11.0" />
+                        <HBox layoutX="11.0" layoutY="346.0" prefHeight="208.0" prefWidth="374.0" style="-fx-background-color: PURPLE;" AnchorPane.leftAnchor="11.0" />
+                        <Label fx:id="totRec" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="69.0" prefHeight="102.0" prefWidth="250.0" style="-fx-background-color: BLACK;" text="00" textAlignment="CENTER" textFill="#08b252" AnchorPane.bottomAnchor="385.0" AnchorPane.leftAnchor="12.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label layoutX="14.0" layoutY="190.0" prefHeight="20.0" prefWidth="140.0" text="RECEITAS DO MÉS DE:" textFill="#0dd34f" AnchorPane.bottomAnchor="362.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="503.0" AnchorPane.topAnchor="189.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label fx:id="totMesAnoDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="592.0" layoutY="78.0" prefHeight="102.0" prefWidth="250.0" style="-fx-background-color: BLACK;" text="00" textAlignment="CENTER" textFill="#f55921" AnchorPane.bottomAnchor="256.0" AnchorPane.rightAnchor="12.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="661.0" layoutY="39.0" prefHeight="17.0" prefWidth="131.0" text="TOTAL DEDESPESAS" textAlignment="CENTER" textFill="WHITE" />
+                        <Label fx:id="recMesAno" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="213.0" prefHeight="102.0" prefWidth="250.0" style="-fx-background-color: BLACK;" text="00" textAlignment="CENTER" textFill="#09cd78" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="12.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="39.0" prefHeight="17.0" prefWidth="131.0" text="TOTAL DE RECEITAS" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="12.0" />
+                        <Label layoutX="244.0" layoutY="190.0" prefHeight="20.0" prefWidth="83.0" text=" &amp; ANO DE:" textFill="#0dd34f" AnchorPane.bottomAnchor="362.0" AnchorPane.leftAnchor="244.0" AnchorPane.rightAnchor="503.0" AnchorPane.topAnchor="189.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <ComboBox fx:id="mesRec" layoutX="148.0" layoutY="186.0" prefHeight="27.0" prefWidth="97.0" AnchorPane.bottomAnchor="358.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="585.0" AnchorPane.topAnchor="186.0" />
+                        <TextField fx:id="anoRec" layoutX="325.0" layoutY="190.0" onMouseExited="#buscarReceita" prefHeight="28.0" prefWidth="90.0" promptText="Digite o Ano" AnchorPane.bottomAnchor="358.0" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="415.0" AnchorPane.topAnchor="190.0" />
+                        <Label contentDisplay="TOP" layoutX="419.0" layoutY="189.0" prefHeight="20.0" prefWidth="142.0" text="DESPESAS DO MÉS DE:" textFill="#f22106" AnchorPane.bottomAnchor="362.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="269.0" AnchorPane.topAnchor="189.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="568.0" layoutY="84.0" prefHeight="102.0" prefWidth="250.0" style="-fx-background-color: BLACK;" text="00" textAlignment="CENTER" textFill="#f55d06" AnchorPane.bottomAnchor="385.0" AnchorPane.rightAnchor="12.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label contentDisplay="TOP" layoutX="655.0" layoutY="189.0" prefHeight="20.0" prefWidth="76.0" text="&amp; ANO DE:" textFill="#f22106" AnchorPane.bottomAnchor="362.0" AnchorPane.leftAnchor="655.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="189.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <ComboBox fx:id="mesDesp" layoutX="559.0" layoutY="186.0" prefHeight="27.0" prefWidth="97.0" AnchorPane.bottomAnchor="358.0" AnchorPane.leftAnchor="559.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="186.0" />
+                        <TextField fx:id="anoDesp" layoutX="727.0" layoutY="186.0" onMouseExited="#buscarDespesa" prefHeight="27.0" prefWidth="83.0" promptText="Digite o Ano" AnchorPane.bottomAnchor="358.0" AnchorPane.leftAnchor="735.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="186.0" />
+                        <Label layoutX="341.0" layoutY="70.0" text="TOTAL DE RECEITAS ANUAL" textFill="WHITE" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="280.0" layoutY="217.0" prefHeight="17.0" prefWidth="273.0" style="-fx-background-color: PURPLE;" text="TOTAL DE DESPESAS ANUAL" textAlignment="CENTER" textFill="#fcfafa" />
+                        <Label fx:id="totAnoRec" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="87.0" prefHeight="96.0" prefWidth="270.0" style="-fx-background-color: BLACK;" text="00" textAlignment="CENTER" textFill="#f22106" AnchorPane.bottomAnchor="385.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label fx:id="totAnoDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="238.0" prefHeight="84.0" prefWidth="270.0" style="-fx-background-color: BLACK;" text="00" textAlignment="CENTER" textFill="#d3cd07" AnchorPane.bottomAnchor="256.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="321.0" prefHeight="17.0" prefWidth="803.0" style="-fx-background-color: PURPLE;" text="ARRECADAÇÃO MENSAL REFERENTE AO ANO EM CURSO" textAlignment="CENTER" textFill="#fcfafa" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="13.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="374.0" text="JANEIRO" textFill="#fcf6f6" />
+                        <Label layoutX="14.0" layoutY="405.0" text="FEVEREIRO" textFill="#0fc3f5" />
+                        <Label layoutX="12.0" layoutY="434.0" text="MARÇO" textFill="#fcf6f6" />
+                        <Label layoutX="14.0" layoutY="462.0" text="ABRIL" textFill="#0fc3f5" />
+                        <Label layoutX="14.0" layoutY="487.0" text="MAIO" textFill="#fcf6f6" />
+                        <Label layoutX="14.0" layoutY="513.0" text="JUNHO" textFill="#0fc3f5" />
+                        <Label fx:id="janRec" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="365.0" prefHeight="30.0" prefWidth="108.0" text="1" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fevRec" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="396.0" prefHeight="30.0" prefWidth="108.0" text="2" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="marcRec" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="425.0" prefHeight="30.0" prefWidth="108.0" text="3" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="abrRec" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="453.0" prefHeight="30.0" prefWidth="108.0" text="4" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="maiRec" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="478.0" prefHeight="30.0" prefWidth="108.0" text="5" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="junRec" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="505.0" prefHeight="30.0" prefWidth="108.0" text="6" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="229.0" layoutY="374.0" text="JULHO" textAlignment="RIGHT" textFill="#fcf6f6" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="211.0" layoutY="405.0" prefHeight="17.0" prefWidth="54.0" text="AGOSTO" textAlignment="RIGHT" textFill="#0fc3f5" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="202.0" layoutY="434.0" prefHeight="17.0" prefWidth="65.0" text="SETEMBRO" textAlignment="RIGHT" textFill="#fcf6f6" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="204.0" layoutY="462.0" prefHeight="17.0" prefWidth="61.0" text="OUTUBRO" textAlignment="RIGHT" textFill="#0fc3f5" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="196.0" layoutY="486.0" text=" NOVEMBRO" textAlignment="RIGHT" textFill="#fcf6f6" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="197.0" layoutY="513.0" prefHeight="17.0" prefWidth="68.0" text="DEZEMBRO" textAlignment="RIGHT" textFill="#0fc3f5" />
+                        <Label fx:id="julRec" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="365.0" prefHeight="30.0" prefWidth="108.0" text="7" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="agoRec" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="396.0" prefHeight="30.0" prefWidth="108.0" text="8" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="setRec" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="425.0" prefHeight="30.0" prefWidth="108.0" text="9" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="outRec" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="453.0" prefHeight="30.0" prefWidth="108.0" text="10" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="novRec" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="478.0" prefHeight="30.0" prefWidth="108.0" text="11" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dezRec" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="504.0" prefHeight="30.0" prefWidth="108.0" text="12" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="395.0" layoutY="372.0" text="JANEIRO" textFill="#f2f2f2" AnchorPane.leftAnchor="395.0" />
+                        <Label layoutX="395.0" layoutY="403.0" text="FEVEREIRO" textFill="#0ec2eb" AnchorPane.leftAnchor="395.0" />
+                        <Label layoutX="393.0" layoutY="432.0" text="MARÇO" textFill="#f2f2f2" AnchorPane.leftAnchor="395.0" />
+                        <Label layoutX="395.0" layoutY="460.0" text="ABRIL" textFill="#0ec2eb" AnchorPane.leftAnchor="395.0" />
+                        <Label layoutX="395.0" layoutY="485.0" text="MAIO" textFill="#f2f2f2" AnchorPane.leftAnchor="395.0" />
+                        <Label layoutX="395.0" layoutY="511.0" text="JUNHO" textFill="#0ec2eb" AnchorPane.leftAnchor="395.0" />
+                        <Label fx:id="janDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="367.0" prefHeight="30.0" prefWidth="108.0" text="1" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fevDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="398.0" prefHeight="30.0" prefWidth="108.0" text="2" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="marcDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="427.0" prefHeight="30.0" prefWidth="108.0" text="3" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="abrDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="455.0" prefHeight="30.0" prefWidth="108.0" text="4" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="maiDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="480.0" prefHeight="30.0" prefWidth="108.0" text="5" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="junDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="506.0" prefHeight="30.0" prefWidth="108.0" text="6" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="637.0" layoutY="372.0" prefHeight="17.0" prefWidth="38.0" text="JULHO" textFill="#f2f2f2" />
+                        <Label layoutX="625.0" layoutY="403.0" prefHeight="17.0" prefWidth="48.0" text="AGOSTO" textFill="#0ec2eb" />
+                        <Label layoutX="614.0" layoutY="432.0" prefHeight="17.0" prefWidth="61.0" text="SETEMBRO" textFill="#f2f2f2" />
+                        <Label layoutX="617.0" layoutY="460.0" prefHeight="17.0" prefWidth="57.0" text="OUTUBRO" textFill="#0ec2eb" />
+                        <Label layoutX="603.0" layoutY="484.0" prefHeight="17.0" prefWidth="69.0" text=" NOVEMBRO" textFill="#f2f2f2" />
+                        <Label layoutX="611.0" layoutY="511.0" text="DEZEMBRO" textFill="#0ec2eb" />
+                        <Label fx:id="julDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="365.0" prefHeight="30.0" prefWidth="108.0" text="7" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="agDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="396.0" prefHeight="30.0" prefWidth="108.0" text="8" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="setDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="425.0" prefHeight="30.0" prefWidth="108.0" text="9" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="outDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="453.0" prefHeight="30.0" prefWidth="108.0" text="10" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="novDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="478.0" prefHeight="30.0" prefWidth="108.0" text="11" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dezDesp" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="504.0" prefHeight="30.0" prefWidth="108.0" text="12" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="350.0" prefHeight="20.0" prefWidth="374.0" style="-fx-background-color: YELLOW;" text="             RECEITAS MENSAL" textFill="#09c95d">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="390.0" layoutY="350.0" prefHeight="20.0" prefWidth="429.0" style="-fx-background-color: YELLOW;" text="             DESPESAS MENSAL" textFill="#e32109" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="11.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="TOTAL DIVIDAS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: WHITE;">
+                     <children>
+                        <HBox layoutX="366.0" layoutY="188.0" prefHeight="26.0" prefWidth="452.0" style="-fx-background-color: YELLOW;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+                        <HBox layoutX="11.0" layoutY="10.0" prefHeight="74.0" prefWidth="830.0" style="-fx-background-color: PURPLE;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+                        <HBox layoutX="390.0" layoutY="345.0" prefHeight="209.0" prefWidth="429.0" style="-fx-background-color: PURPLE;" />
+                        <HBox layoutX="11.0" layoutY="346.0" prefHeight="208.0" prefWidth="374.0" style="-fx-background-color: PURPLE;" />
+                        <Label fx:id="totRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="69.0" prefHeight="102.0" prefWidth="250.0" style="-fx-background-color: BLACK;" text="00" textAlignment="CENTER" textFill="#08b252" AnchorPane.bottomAnchor="385.0" AnchorPane.leftAnchor="12.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label layoutX="14.0" layoutY="190.0" prefHeight="20.0" prefWidth="140.0" text="A RECEBER MÉS DE:" textFill="#0dd34f" AnchorPane.leftAnchor="12.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totMesAnoDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="592.0" layoutY="78.0" prefHeight="102.0" prefWidth="250.0" style="-fx-background-color: BLACK;" text="00" textFill="#f55921" AnchorPane.bottomAnchor="256.0" AnchorPane.rightAnchor="12.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="628.0" layoutY="39.0" prefHeight="17.0" prefWidth="164.0" text="TOTAL DE CONTAS A PAGAR" textAlignment="CENTER" textFill="WHITE" />
+                        <Label fx:id="recMesAno1" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="213.0" prefHeight="102.0" prefWidth="250.0" style="-fx-background-color: BLACK;" text="00" textFill="#09cd78" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="12.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="39.0" prefHeight="17.0" prefWidth="172.0" text="TOTAL DE CONTAS A RECEBER" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="12.0" />
+                        <Label layoutX="244.0" layoutY="190.0" prefHeight="20.0" prefWidth="83.0" text=" &amp; ANO DE:" textFill="#0dd34f">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="mesRec1" layoutX="148.0" layoutY="186.0" prefHeight="27.0" prefWidth="97.0" />
+                        <TextField fx:id="anoRec1" layoutX="325.0" layoutY="185.0" onMouseExited="#buscarContasAreceber" prefHeight="33.0" prefWidth="90.0" promptText="Digite o Ano" />
+                        <Label contentDisplay="TOP" layoutX="419.0" layoutY="189.0" prefHeight="20.0" prefWidth="142.0" text="A PAGAR MÉS DE:" textFill="#f22106">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="568.0" layoutY="84.0" prefHeight="102.0" prefWidth="250.0" style="-fx-background-color: BLACK;" text="00" textFill="#f55d06" AnchorPane.bottomAnchor="385.0" AnchorPane.rightAnchor="12.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label contentDisplay="TOP" layoutX="655.0" layoutY="189.0" prefHeight="20.0" prefWidth="76.0" text="&amp; ANO DE:" textFill="#f22106">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="mesDesp1" layoutX="559.0" layoutY="186.0" prefHeight="27.0" prefWidth="97.0" />
+                        <TextField fx:id="anoDesp1" layoutX="727.0" layoutY="186.0" onMouseExited="#buscarContasApagar" prefHeight="27.0" prefWidth="83.0" promptText="Digite o Ano" AnchorPane.rightAnchor="12.0" />
+                        <Label layoutX="341.0" layoutY="70.0" text="TOTAL A  RECEBER ANUAL" textFill="WHITE" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="280.0" layoutY="217.0" prefHeight="17.0" prefWidth="273.0" style="-fx-background-color: PURPLE;" text="TOTAL A PAGAR ANUAL" textAlignment="CENTER" textFill="#fcfafa" />
+                        <Label fx:id="totAnoRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="87.0" prefHeight="96.0" prefWidth="270.0" style="-fx-background-color: BLACK;" text="00" textFill="#f22106" AnchorPane.bottomAnchor="385.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totAnoDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="238.0" prefHeight="84.0" prefWidth="270.0" style="-fx-background-color: BLACK;" text="00" textFill="#d3cd07" AnchorPane.bottomAnchor="256.0">
+                           <font>
+                              <Font name="Amarillo" size="24.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="321.0" prefHeight="17.0" prefWidth="803.0" style="-fx-background-color: PURPLE;" text="DIVIDAS  MENSAL REFERENTE AO ANO EM CURSO" textAlignment="CENTER" textFill="#fcfafa" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="13.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="374.0" text="JANEIRO" textFill="#fcf6f6" />
+                        <Label layoutX="14.0" layoutY="405.0" text="FEVEREIRO" textFill="#0fc3f5" />
+                        <Label layoutX="12.0" layoutY="434.0" text="MARÇO" textFill="#fcf6f6" />
+                        <Label layoutX="14.0" layoutY="462.0" text="ABRIL" textFill="#0fc3f5" />
+                        <Label layoutX="14.0" layoutY="487.0" text="MAIO" textFill="#fcf6f6" />
+                        <Label layoutX="14.0" layoutY="513.0" text="JUNHO" textFill="#0fc3f5" />
+                        <Label fx:id="janRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="365.0" prefHeight="30.0" prefWidth="108.0" text="1" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fevRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="396.0" prefHeight="30.0" prefWidth="108.0" text="2" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="marcRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="425.0" prefHeight="30.0" prefWidth="108.0" text="3" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="abrRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="453.0" prefHeight="30.0" prefWidth="108.0" text="4" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="maiRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="478.0" prefHeight="30.0" prefWidth="108.0" text="5" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="junRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="505.0" prefHeight="30.0" prefWidth="108.0" text="6" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="229.0" layoutY="374.0" text="JULHO" textAlignment="RIGHT" textFill="#fcf6f6" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="211.0" layoutY="405.0" prefHeight="17.0" prefWidth="54.0" text="AGOSTO" textAlignment="RIGHT" textFill="#0fc3f5" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="202.0" layoutY="434.0" prefHeight="17.0" prefWidth="65.0" text="SETEMBRO" textAlignment="RIGHT" textFill="#fcf6f6" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="204.0" layoutY="462.0" prefHeight="17.0" prefWidth="61.0" text="OUTUBRO" textAlignment="RIGHT" textFill="#0fc3f5" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="196.0" layoutY="486.0" text=" NOVEMBRO" textAlignment="RIGHT" textFill="#fcf6f6" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="197.0" layoutY="513.0" prefHeight="17.0" prefWidth="68.0" text="DEZEMBRO" textAlignment="RIGHT" textFill="#0fc3f5" />
+                        <Label fx:id="julRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="365.0" prefHeight="30.0" prefWidth="108.0" text="7" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="agoRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="396.0" prefHeight="30.0" prefWidth="108.0" text="8" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="setRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="425.0" prefHeight="30.0" prefWidth="108.0" text="9" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="outRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="453.0" prefHeight="30.0" prefWidth="108.0" text="10" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="novRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="478.0" prefHeight="30.0" prefWidth="108.0" text="11" textAlignment="CENTER" textFill="#fcf6f6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dezRec1" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="504.0" prefHeight="30.0" prefWidth="108.0" text="12" textAlignment="CENTER" textFill="#0fc3f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="395.0" layoutY="372.0" text="JANEIRO" textFill="#f2f2f2" />
+                        <Label layoutX="395.0" layoutY="403.0" text="FEVEREIRO" textFill="#0ec2eb" />
+                        <Label layoutX="393.0" layoutY="432.0" text="MARÇO" textFill="#f2f2f2" />
+                        <Label layoutX="395.0" layoutY="460.0" text="ABRIL" textFill="#0ec2eb" />
+                        <Label layoutX="395.0" layoutY="485.0" text="MAIO" textFill="#f2f2f2" />
+                        <Label layoutX="395.0" layoutY="511.0" text="JUNHO" textFill="#0ec2eb" />
+                        <Label fx:id="janDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="367.0" prefHeight="30.0" prefWidth="108.0" text="1" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fevDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="398.0" prefHeight="30.0" prefWidth="108.0" text="2" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="marcDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="427.0" prefHeight="30.0" prefWidth="108.0" text="3" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="abrDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="455.0" prefHeight="30.0" prefWidth="108.0" text="4" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="maiDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="480.0" prefHeight="30.0" prefWidth="108.0" text="5" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="junDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="506.0" prefHeight="30.0" prefWidth="108.0" text="6" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="637.0" layoutY="372.0" prefHeight="17.0" prefWidth="38.0" text="JULHO" textFill="#f2f2f2" />
+                        <Label layoutX="625.0" layoutY="403.0" prefHeight="17.0" prefWidth="48.0" text="AGOSTO" textFill="#0ec2eb" />
+                        <Label layoutX="614.0" layoutY="432.0" prefHeight="17.0" prefWidth="61.0" text="SETEMBRO" textFill="#f2f2f2" />
+                        <Label layoutX="617.0" layoutY="460.0" prefHeight="17.0" prefWidth="57.0" text="OUTUBRO" textFill="#0ec2eb" />
+                        <Label layoutX="603.0" layoutY="484.0" prefHeight="17.0" prefWidth="69.0" text=" NOVEMBRO" textFill="#f2f2f2" />
+                        <Label layoutX="611.0" layoutY="511.0" text="DEZEMBRO" textFill="#0ec2eb" />
+                        <Label fx:id="julDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="365.0" prefHeight="30.0" prefWidth="108.0" text="7" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="agDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="396.0" prefHeight="30.0" prefWidth="108.0" text="8" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="setDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="425.0" prefHeight="30.0" prefWidth="108.0" text="9" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="outDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="453.0" prefHeight="30.0" prefWidth="108.0" text="10" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="novDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="478.0" prefHeight="30.0" prefWidth="108.0" text="11" textAlignment="CENTER" textFill="#f2f2f2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dezDesp1" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="504.0" prefHeight="30.0" prefWidth="108.0" text="12" textAlignment="CENTER" textFill="#0ec2eb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="350.0" prefHeight="20.0" prefWidth="374.0" style="-fx-background-color: YELLOW;" text="CONTAS A RECEBER MENSAL" textFill="#09c95d">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="390.0" layoutY="350.0" prefHeight="20.0" prefWidth="429.0" style="-fx-background-color: YELLOW;" text="CONTAS A PAGAR MENSAL" textFill="#e32109">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

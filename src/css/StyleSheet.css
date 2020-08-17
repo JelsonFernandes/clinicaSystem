@@ -1,0 +1,145 @@
+#menBar{
+   
+
+    -fx-background-color:blueviolet;
+}
+#nenuBarCunsulta{
+
+    -fx-background-color:#8A2BE2;
+}
+#menBarFarmacia{
+
+    -fx-background-color:#8A2BE2;
+}
+#menuBarEmpresa{
+
+    -fx-background-color:#8A2BE2;
+}
+#Visao{
+
+    -fx-background-color:#8A2BE2;
+}
+#btnTatalidade:hover {
+    -fx-background-color:#00BFFF; 
+}
+#btnMortalidade:hover {
+    -fx-background-color:#00BFFF; 
+}
+#btnRelatorio:hover {
+    -fx-background-color:#00BFFF; 
+}
+#btnGrafico:hover {
+    -fx-background-color:#00BFFF; 
+}
+
+#btnUsuario:hover {
+    -fx-background-color:#00BFFF; 
+}
+
+#MenuHamburger:hover{
+    -fx-background-color:#00BFFF; 
+}
+#MenuHamburger{
+    -fx-background-color:#FF00FF; 
+}
+#Enfermeiros:hover{
+    -fx-background-color:#00BFFF; 
+   
+}
+#Medico:hover{
+    -fx-background-color:#00BFFF; 
+   
+}
+#Medico:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#Paciente:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#Fornecedor:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#Cliente:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#menucad:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#menuFarm:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#menuConsu:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#menuFin:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#menuVis:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#Agendar:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#Atender:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#Consultar:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#Laboratorio:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnMedicamentos:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnPontoVenda:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnServicos:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnEmpresa:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnFuncionarios:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#menuSair:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#menuRel:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnEmpresa2:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnProdutos:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnProdutos:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+

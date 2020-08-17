@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="766.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.AtenderAgendamentoController">
+   <children>
+      <TitledPane animated="false" layoutX="-6.0" prefHeight="27.0" prefWidth="766.0" text="Agenda" AnchorPane.bottomAnchor="572.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="826.0" />
+        </content>
+      </TitledPane>
+      <TableView fx:id="TBVaTENDIMENTO" layoutX="7.0" layoutY="110.0" prefHeight="359.0" prefWidth="749.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="110.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="66.0" text="ID" />
+          <TableColumn fx:id="NOME" prefWidth="197.0" text=" PACIENTE" />
+            <TableColumn fx:id="DATAAGENDAMENTO" minWidth="2.0" prefWidth="163.0" text="DATA DO AGENDAMENTO" />
+            <TableColumn fx:id="DATACONSULTA" prefWidth="147.0" text="DATA DA CONSULTA" />
+            <TableColumn fx:id="MEDICO" prefWidth="174.0" text="MÉDICO" />
+        </columns>
+      </TableView>
+      <Label layoutX="255.0" layoutY="94.0" prefHeight="17.0" prefWidth="201.0" text="AGENDAMENTO PARA HOJE" textAlignment="CENTER" textFill="#eeeaea">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="480.0" layoutY="73.0" prefHeight="17.0" prefWidth="33.0" text="Data" textFill="#eeeaea">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtData" layoutX="540.0" layoutY="69.0" prefHeight="25.0" prefWidth="201.0" />
+      <Label layoutX="467.0" layoutY="38.0" prefHeight="17.0" prefWidth="71.0" text="   Médico" textFill="#eeeaea">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cboMedico" layoutX="540.0" layoutY="34.0" onAction="#preencherTabela" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: white;" />
+      <Label layoutX="409.0" layoutY="537.0" prefHeight="25.0" prefWidth="71.0" text="Paciente" textFill="#f2eded">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPaciente" layoutX="485.0" layoutY="537.0" prefHeight="25.0" prefWidth="264.0" />
+      <Button fx:id="btnAtendimento" layoutX="8.0" layoutY="469.0" mnemonicParsing="false" onAction="#preencherTabela" prefHeight="44.0" prefWidth="749.0" text="Atender Agendamento" />
+   </children>
+</AnchorPane>

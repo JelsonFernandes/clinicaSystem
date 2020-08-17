@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseReleased="#PegarIdade" prefHeight="599.0" prefWidth="766.0" style="-fx-background-color: FFFAF0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.PacientesController">
+   <children>
+      <HBox layoutX="19.0" layoutY="29.0" onMouseDragExited="#PegarIdade" prefHeight="328.0" prefWidth="766.0" style="-fx-background-color: #ecbaed;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0" />
+      <Label layoutX="45.0" layoutY="65.0" prefHeight="25.0" prefWidth="48.0" text="ID" AnchorPane.leftAnchor="19.0" />
+      <Label layoutX="45.0" layoutY="134.0" prefHeight="17.0" prefWidth="48.0" text="Nome" AnchorPane.leftAnchor="19.0" />
+      <Label layoutX="491.0" layoutY="61.0" prefHeight="17.0" prefWidth="31.0" text="Data" />
+      <Label layoutX="599.0" layoutY="143.0" text="Idade" AnchorPane.bottomAnchor="450.0" AnchorPane.rightAnchor="137.0" />
+      <Label layoutX="491.0" layoutY="94.0" text="Nascimento" />
+      <Pane accessibleRole="CONTEXT_MENU" layoutX="19.0" layoutY="232.0" prefHeight="90.0" prefWidth="728.0" style="-fx-background-color: purple;" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="232.0">
+         <children>
+            <Label layoutX="14.0" layoutY="18.0" text="Provincia" textFill="#eeecec" />
+            <Label layoutX="257.0" layoutY="19.0" text="Municipio" textFill="#eeecec" />
+            <Label layoutX="466.0" layoutY="17.0" text="Bairro" textFill="#eeecec" />
+            <Label layoutX="14.0" layoutY="53.0" prefHeight="17.0" prefWidth="48.0" text="Rua" textFill="#eeecec" />
+            <Label layoutX="257.0" layoutY="54.0" text="Casa Nº:" textFill="#eeecec" />
+            <Label layoutX="462.0" layoutY="57.0" text="Código Posta" textFill="#eeecec" />
+            <JFXTextField fx:id="muniPaciente" layoutX="310.0" layoutY="4.0" style="-fx-background-color: white;" unFocusColor="#1db203" />
+            <JFXTextField fx:id="casaPaciente" layoutX="310.0" layoutY="44.0" style="-fx-background-color: white;" unFocusColor="#1db203" />
+         </children>
+      </Pane>
+      <Label layoutX="45.0" layoutY="167.0" text="Telefone" AnchorPane.leftAnchor="19.0" />
+      <Label layoutX="471.0" layoutY="159.0" text="E-Mail" />
+      <Label layoutX="46.0" layoutY="204.0" text="Tipo de Documento" AnchorPane.leftAnchor="19.0" />
+      <Label layoutX="363.0" layoutY="205.0" text="Número de documento" />
+      <TableView fx:id="TablePaciente" layoutX="25.0" layoutY="420.0" prefHeight="149.0" prefWidth="728.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="39.0" text="ID" />
+          <TableColumn fx:id="NOME" prefWidth="200.0" text="Nome" />
+            <TableColumn fx:id="NASCIMENTO" prefWidth="81.0" text="Nascimento" />
+            <TableColumn fx:id="TELEFONE" prefWidth="102.0" text="Telefone" />
+            <TableColumn fx:id="EMAIL" prefWidth="124.0" text="E-Mail" />
+            <TableColumn fx:id="MUNICIPIO" prefWidth="84.0" text="Municipio" />
+            <TableColumn fx:id="CASA" prefWidth="98.0" text="Casa Nº" />
+        </columns>
+         <effect>
+            <ColorAdjust contrast="0.36" />
+         </effect>
+      </TableView>
+      <TextField fx:id="pesquiPaciente" layoutX="19.0" layoutY="358.0" onAction="#preencherTabela" prefHeight="35.0" prefWidth="728.0" promptText="Pesquisar Por Nome" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" />
+      <BorderPane fx:id="borderGroup" layoutX="224.0" layoutY="45.0" prefHeight="55.0" prefWidth="230.0" stylesheets="@../css/paciente.css">
+         <left>
+            <JFXRadioButton fx:id="Masculino" prefHeight="17.0" prefWidth="105.0" text="Masculino" textFill="#f7f7f8" BorderPane.alignment="CENTER_RIGHT">
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXRadioButton>
+         </left>
+         <right>
+            <JFXRadioButton fx:id="Femenino" prefHeight="20.0" prefWidth="98.0" text="Femenino" textFill="#f7f7f8" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </JFXRadioButton>
+         </right>
+      </BorderPane>
+      <JFXTextField fx:id="idPaciente" layoutX="68.0" layoutY="66.0" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: white;" unFocusColor="#1db203" />
+      <JFXTextField fx:id="NomePaciente" layoutX="67.0" layoutY="130.0" prefHeight="25.0" prefWidth="292.0" style="-fx-background-color: white;" unFocusColor="#1db203" />
+      <JFXTextField fx:id="FonePaciente" layoutX="70.0" layoutY="163.0" prefHeight="25.0" prefWidth="286.0" style="-fx-background-color: white;" unFocusColor="#1db203" />
+      <Label fx:id="dataPaciente" layoutX="529.0" layoutY="53.0" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="19.0" />
+      <JFXDatePicker fx:id="nascipaciente" layoutX="565.0" layoutY="90.0" onKeyReleased="#PegarIdade" style="-fx-background-color: white;" AnchorPane.rightAnchor="19.0" />
+      <JFXTextField fx:id="idadepaciente" layoutX="662.0" layoutY="130.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: white;" unFocusColor="#1db203" AnchorPane.bottomAnchor="450.0" AnchorPane.rightAnchor="19.0" />
+      <JFXTextField fx:id="emailPaciente" layoutX="515.0" layoutY="155.0" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: white;" unFocusColor="#1db203" AnchorPane.rightAnchor="19.0" />
+      <JFXTextField fx:id="numDocPaciente" layoutX="509.0" layoutY="200.0" prefHeight="25.0" prefWidth="239.0" style="-fx-background-color: white;" unFocusColor="#1db203" />
+      <JFXComboBox fx:id="tipoDocPaciente" layoutX="132.0" layoutY="200.0" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: white;" unFocusColor="#15a808" />
+      <JFXComboBox fx:id="provPaciente" layoutX="85.0" layoutY="241.0" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="ruaPaciente" layoutX="72.0" layoutY="281.0" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: white;" unFocusColor="#1db203" />
+      <JFXTextField fx:id="bairroPaciente" layoutX="539.0" layoutY="241.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: white;" unFocusColor="#1db203" AnchorPane.rightAnchor="25.0" />
+      <JFXTextField fx:id="codPstPaciente" layoutX="575.0" layoutY="281.0" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: white;" unFocusColor="#1db203" AnchorPane.rightAnchor="25.0" />
+      <JFXButton fx:id="btRemover" alignment="CENTER_RIGHT" layoutX="534.0" layoutY="323.0" onAction="#handelerremover" prefHeight="35.0" prefWidth="214.0" stylesheets="@../css/paciente.css" text="REMOVER" textFill="#fcfafa">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnBuscar" layoutX="20.0" layoutY="393.0" onAction="#preencherTabela" prefHeight="25.0" prefWidth="52.0" stylesheets="@../css/paciente.css" text="BUSCAR" textFill="#f8f6f6" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btAlterar" alignment="CENTER_RIGHT" layoutX="379.0" layoutY="323.0" onAction="#HandelerAlterar" prefHeight="35.0" prefWidth="178.0" stylesheets="@../css/paciente.css" text="ALTERAR" textFill="#f5f3f3">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btPesquisar" alignment="CENTER_RIGHT" layoutX="207.0" layoutY="323.0" onAction="#handleButtonSelecionar" prefHeight="35.0" prefWidth="178.0" stylesheets="@../css/paciente.css" text="PESQUISAR" textFill="#f8f7f7">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btSalvar" alignment="CENTER_RIGHT" layoutX="19.0" layoutY="323.0" onAction="#HandelerSalvar" prefHeight="35.0" prefWidth="194.0" stylesheets="@../css/paciente.css" text="SALVAR" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="35.0" fitWidth="49.0" layoutX="23.0" layoutY="323.0">
+         <image>
+            <Image url="@../fotos/cadastro.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="221.0" layoutY="326.0">
+         <image>
+            <Image url="@../fotos/search.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="405.0" layoutY="326.0">
+         <image>
+            <Image url="@../fotos/relatório.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="582.0" layoutY="326.0">
+         <image>
+            <Image url="@../fotos/remover.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="31.0" layoutY="396.0">
+         <image>
+            <Image url="@../fotos/Pesquisar.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="146.0" layoutY="364.0">
+         <image>
+            <Image url="@../fotos/Pesquisar.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="7.0" layoutY="16.0" prefHeight="17.0" prefWidth="200.0" style="-fx-background-color: green;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

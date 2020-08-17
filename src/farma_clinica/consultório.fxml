@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.ConsultórioController">
+   <children>
+      <TitledPane animated="false" layoutY="1.0" prefHeight="38.0" prefWidth="202.0" text="CONSULTÓRIO" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </TitledPane>
+      <Label layoutX="14.0" layoutY="51.0" prefHeight="23.0" prefWidth="76.0" text="ID CONSULTA" />
+      <TextField fx:id="codConsulta" layoutX="107.0" layoutY="50.0" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="545.0" layoutY="50.0" prefHeight="25.0" prefWidth="109.0" text="  DATA ACTUAL" />
+      <TextField fx:id="DataAtual" layoutX="661.0" layoutY="50.0" prefHeight="25.0" prefWidth="128.0" AnchorPane.rightAnchor="11.0" />
+      <Label layoutX="221.0" layoutY="51.0" prefHeight="23.0" prefWidth="50.0" text="NOME:" />
+      <TextField fx:id="Nome" layoutX="278.0" layoutY="50.0" prefHeight="25.0" prefWidth="264.0" />
+      <Label layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="82.0" text="ID DA AGENDA" />
+      <TextField fx:id="idAgenda" layoutX="107.0" layoutY="90.0" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="221.0" layoutY="94.0" text="MÉDICO" />
+      <TextField fx:id="Medico" layoutX="278.0" layoutY="90.0" prefHeight="25.0" prefWidth="264.0" />
+      <Label layoutX="545.0" layoutY="94.0" prefHeight="17.0" prefWidth="117.0" text="DATA DA ABERTURA" />
+      <TextField fx:id="DataAbertura" layoutX="661.0" layoutY="90.0" prefHeight="25.0" prefWidth="128.0" AnchorPane.rightAnchor="11.0" />
+      <Label layoutX="14.0" layoutY="140.0" prefHeight="17.0" prefWidth="82.0" text="NASCIMENTO" />
+      <TextField fx:id="Nascimento" layoutX="107.0" layoutY="136.0" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="224.0" layoutY="141.0" prefHeight="17.0" prefWidth="45.0" text="IDADE" />
+      <TextField fx:id="Idade" layoutX="278.0" layoutY="136.0" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="385.0" layoutY="118.0" prefHeight="17.0" prefWidth="158.0" text="DATA ULTIMA CONSULTA" />
+      <Label layoutX="610.0" layoutY="118.0" prefHeight="17.0" prefWidth="179.0" text="DATA DA PROXIMA CONSULTA" />
+      <TextField fx:id="UltimaConsulta" layoutX="385.0" layoutY="136.0" prefHeight="25.0" prefWidth="179.0" />
+      <TextField fx:id="ProximaConsulta" layoutX="607.0" layoutY="136.0" prefHeight="25.0" prefWidth="179.0" AnchorPane.rightAnchor="11.0" />
+      <Label layoutX="17.0" layoutY="181.0" prefHeight="17.0" prefWidth="76.0" text="SEXO" />
+      <BorderPane layoutX="93.0" layoutY="170.0" prefHeight="38.0" prefWidth="231.0">
+         <left>
+            <RadioButton fx:id="Masculino" mnemonicParsing="false" text="MASCULINO" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <RadioButton fx:id="Femenino" mnemonicParsing="false" text="FEMENINO" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Label layoutX="324.0" layoutY="178.0" prefHeight="23.0" prefWidth="142.0" text="DIAGNÓSTICO PRIMÁRIO" />
+      <TextField fx:id="Diagnostico" layoutX="475.0" layoutY="177.0" prefHeight="25.0" prefWidth="316.0" AnchorPane.rightAnchor="11.0" />
+      <Icon content="HELP_OUTLINE" />
+      <Button fx:id="Analises" layoutY="208.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="270.0" text="ANÁLISES" AnchorPane.leftAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="Receitas" layoutX="270.0" layoutY="208.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="280.0" text="RECEITAS">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="Relatorio" layoutX="549.0" layoutY="208.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="254.0" text="RELATÓRIO MÉDICO" AnchorPane.rightAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <TextArea fx:id="QueixaPrincipal" layoutX="24.0" layoutY="278.0" prefHeight="44.0" prefWidth="280.0" AnchorPane.leftAnchor="24.0" />
+      <Label layoutX="17.0" layoutY="256.0" prefHeight="17.0" prefWidth="280.0" text="                          QUEIXA PRINCIPAL" />
+      <Label layoutX="314.0" layoutY="256.0" prefHeight="17.0" prefWidth="231.0" text="HABITOS &amp; MODO DE  VIDA DO PACIENTE" />
+      <TextArea fx:id="habitosVida" layoutX="310.0" layoutY="273.0" prefHeight="123.0" prefWidth="238.0" />
+      <Label layoutX="558.0" layoutY="253.0" prefHeight="17.0" prefWidth="231.0" text="  HISTÓRICO PATOLOGICO DO PACIENTE" />
+      <TextArea fx:id="Historico" layoutX="554.0" layoutY="270.0" prefHeight="123.0" prefWidth="238.0" />
+      <Label layoutX="96.0" layoutY="320.0" prefHeight="17.0" prefWidth="109.0" text="SITUAÇÃO ACTUAL" />
+      <TextArea fx:id="SituacaoAtual" layoutX="24.0" layoutY="337.0" prefHeight="61.0" prefWidth="280.0" AnchorPane.leftAnchor="24.0" />
+      <TextArea fx:id="progresso" layoutX="24.0" layoutY="420.0" prefHeight="110.0" prefWidth="363.0" AnchorPane.leftAnchor="24.0" />
+      <TextArea fx:id="Recomendacoes" layoutX="429.0" layoutY="420.0" prefHeight="110.0" prefWidth="363.0" />
+      <Label layoutX="24.0" layoutY="398.0" prefHeight="17.0" prefWidth="363.0" text=" DESCREVA BREVEMENTE O PROGRESSO OU BAIXA DO PACIENTE" />
+      <Label layoutX="429.0" layoutY="398.0" prefHeight="17.0" prefWidth="363.0" text="DESCREVA ALGUMAS RECOMENDAÇÕES PASSADAS AO PACIENTES" />
+      <Label layoutX="24.0" layoutY="530.0" prefHeight="17.0" prefWidth="363.0" text="  ESCOLHA EM QUE ESTADO ABAIXO ENCONTRA-SE  O PACIENTE" />
+      <ComboBox fx:id="Estado" layoutX="21.0" layoutY="547.0" prefHeight="38.0" prefWidth="363.0" />
+      <Button fx:id="Buscar" layoutX="429.0" layoutY="535.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="363.0" text="BUSCAR DADOS">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="Atualizar" layoutX="429.0" layoutY="579.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="363.0" text="ACTUALIZAR DADOS DO PACIENTE ">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="Pesquisar" layoutX="21.0" layoutY="592.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="363.0" text="PESQUISAR OUTRO PACIENTE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

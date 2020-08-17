@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.VendasController">
+   <children>
+      <TitledPane animated="false" layoutX="6.0" layoutY="7.0" text="VENDAS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="20.0" prefWidth="898.0" style="-fx-background-color: green;" />
+        </content>
+      </TitledPane>
+      <AnchorPane layoutX="14.0" layoutY="42.0" prefHeight="538.0" prefWidth="250.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="42.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <Button fx:id="AbrirVenda" mnemonicParsing="false" onAction="#AbrirVenda" prefHeight="46.0" prefWidth="263.0" text="ABRIR VENDA" textFill="#08944e">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font></Button>
+            <TextField fx:id="CodVenda" layoutX="13.0" layoutY="231.0" prefHeight="17.0" prefWidth="227.0" />
+            <Label layoutX="16.0" layoutY="208.0" prefHeight="23.0" prefWidth="220.0" text="CÓDIGO DA VENDA" textFill="#f5efef" />
+            <TextField fx:id="Cliente" layoutX="13.0" layoutY="273.0" prefHeight="17.0" prefWidth="227.0" />
+            <Label layoutX="16.0" layoutY="256.0" prefHeight="17.0" prefWidth="220.0" text="CLIENTE" textFill="#f5efef" />
+            <Label layoutX="16.0" layoutY="298.0" prefHeight="17.0" prefWidth="70.0" text="OPERADOR" textFill="#f5efef" />
+            <TextField fx:id="Operador" layoutX="13.0" layoutY="315.0" prefHeight="17.0" prefWidth="227.0" />
+            <AnchorPane layoutY="340.0" prefHeight="313.0" prefWidth="263.0" style="-fx-background-color: purple;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="340.0">
+               <children>
+                  <Label layoutX="18.0" prefHeight="23.0" prefWidth="227.0" text="RETORNOS" textFill="#fcf8f8" />
+                  <TextArea fx:id="Retorno" layoutX="6.0" layoutY="20.0" prefHeight="284.0" prefWidth="250.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="20.0" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="TableViewProduto" editable="true" layoutY="117.0" onMouseClicked="#setarCampos" prefHeight="91.0" prefWidth="263.0">
+              <columns>
+                <TableColumn fx:id="IDPROD" prefWidth="46.0" text="ID" />
+                <TableColumn fx:id="DESCRIPROD" prefWidth="75.0" text="DESCRIÇÃO" />
+                  <TableColumn fx:id="MEDPROD" prefWidth="75.0" text="MEDIDA" />
+                  <TableColumn fx:id="VALORPROD" prefWidth="75.0" text="VALOR" />
+              </columns>
+            </TableView>
+            <TextField fx:id="Pesquisar" layoutY="84.0" prefHeight="33.0" prefWidth="263.0" promptText="Pesquisar Produto">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <Button fx:id="Buscar" disable="true" layoutX="1.0" layoutY="46.0" mnemonicParsing="false" onAction="#preencherTabelaProduto" prefHeight="33.0" prefWidth="263.0" text="BUSCAR PRODUTO" textFill="#07e191">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="510.0" layoutY="46.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="227.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="42.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <Label layoutY="6.0" prefHeight="17.0" prefWidth="227.0" text="                     DATA DA VENDA" textAlignment="CENTER" textFill="#f5efef" />
+            <Label layoutY="109.0" prefHeight="23.0" prefWidth="227.0" text="                    TOTAL DA VENDA" textFill="#f5efef" />
+            <Label layoutY="209.0" prefHeight="17.0" prefWidth="227.0" text="               TOTAL DE DESCONTO" textFill="#f5efef" />
+            <Label layoutY="285.0" prefHeight="17.0" prefWidth="227.0" text="                    VALOR RECEBIDO" textFill="#f5efef" />
+            <Label layoutX="16.0" layoutY="377.0" prefHeight="23.0" prefWidth="237.0" text="                           TROCO" textFill="#f5efef" />
+            <Label layoutY="469.0" prefHeight="17.0" prefWidth="227.0" text="                       VALOR FINAL" textFill="#f5efef" />
+            <Label fx:id="Data" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="23.0" prefHeight="23.0" prefWidth="227.0" style="-fx-background-color: black;" textAlignment="CENTER" textFill="#eff4f5">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="Total" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="132.0" prefHeight="77.0" prefWidth="204.0" style="-fx-background-color: black;" textFill="#f3f4f5" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font></Label>
+            <Label fx:id="TotalDesconto" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="226.0" prefHeight="59.0" prefWidth="227.0" style="-fx-background-color: black;" text="                     " textFill="#eeeeee" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font></Label>
+            <TextField fx:id="ValorRecebido" alignment="CENTER" layoutX="19.0" layoutY="300.0" prefHeight="77.0" prefWidth="237.0" promptText="INSIRA O VALOR RECEBIDO" style="-fx-background-color: #DCDCDC;" AnchorPane.bottomAnchor="276.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" />
+            <Label fx:id="Troco" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="400.0" prefHeight="69.0" prefWidth="227.0" style="-fx-background-color: black;" text="                               " textFill="#eeeeee" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font></Label>
+            <Label fx:id="ValorFinal" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="488.0" prefHeight="91.0" prefWidth="237.0" style="-fx-background-color: black;" text="                         " textFill="#eeeeee" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font></Label>
+            <Label layoutX="-5.0" layoutY="59.0" prefHeight="17.0" prefWidth="237.0" text="                  TIPO DE PAGAMENTIO" textFill="#f5efef" />
+            <ComboBox fx:id="TipoPagamento" layoutX="-2.0" layoutY="76.0" prefHeight="33.0" prefWidth="227.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <effect>
+                  <DropShadow />
+               </effect></ComboBox>
+            <Button fx:id="FinalizarVenda" disable="true" layoutX="-5.0" layoutY="579.0" mnemonicParsing="false" onAction="#FinalizarVenda" prefHeight="46.0" prefWidth="237.0" text="FINALIZAR VENDA" textFill="#11c979" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="TableViewVenda" layoutX="273.0" layoutY="181.0" onMouseClicked="#setarItens" prefHeight="411.0" prefWidth="485.0" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="273.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="181.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="35.0" text="ID" />
+          <TableColumn fx:id="DESCRICAO" prefWidth="100.0" text="DESCRIÇÃO" />
+            <TableColumn fx:id="MEDIDA" prefWidth="70.0" text="MEDIDA" />
+            <TableColumn fx:id="VALOR" prefWidth="70.0" text="VALOR" />
+            <TableColumn fx:id="QUANTIDADE" prefWidth="53.0" text="QTDE" />
+            <TableColumn fx:id="DESCONTO" prefWidth="79.0" text="DESCONTO" />
+            <TableColumn fx:id="TOTAL" minWidth="0.0" prefWidth="88.0" text="TOTAL" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Label layoutX="360.0" layoutY="96.0" prefHeight="17.0" prefWidth="61.0" text="PRODUTO" textFill="#fffdfd" />
+      <AnchorPane layoutX="271.0" layoutY="199.0" />
+      <TextField fx:id="Produto" disable="true" layoutX="421.0" layoutY="88.0" prefHeight="33.0" prefWidth="204.0" />
+      <Label layoutX="277.0" layoutY="124.0" prefHeight="17.0" prefWidth="53.0" text="MEDIDA" textFill="#fffdfd" />
+      <Label layoutX="447.0" layoutY="124.0" prefHeight="17.0" prefWidth="89.0" text="QUANTIDADE" textFill="#fffdfd" />
+      <Label layoutX="541.0" layoutY="124.0" prefHeight="17.0" prefWidth="89.0" text="DESCONTO" textFill="#fffdfd" />
+      <TextField fx:id="Medida" disable="true" layoutX="272.0" layoutY="141.0" prefHeight="33.0" prefWidth="70.0" AnchorPane.leftAnchor="272.0" />
+      <TextField fx:id="Valor" disable="true" layoutX="346.0" layoutY="141.0" prefHeight="33.0" prefWidth="89.0" />
+      <TextField fx:id="Quantidade" disable="true" layoutX="438.0" layoutY="141.0" prefHeight="33.0" prefWidth="102.0" />
+      <TextField fx:id="DescontoUtnit" disable="true" layoutX="542.0" layoutY="141.0" prefHeight="33.0" prefWidth="82.0" />
+      <Button fx:id="Adicionar" disable="true" layoutX="630.0" layoutY="82.0" mnemonicParsing="false" onAction="#preencherTabela" prefHeight="91.0" prefWidth="96.0" text="ADICIONAR " textFill="#0ac983" AnchorPane.leftAnchor="630.0" AnchorPane.rightAnchor="239.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Button>
+      <Label layoutX="356.0" layoutY="124.0" prefHeight="17.0" prefWidth="70.0" text="VALOR" textFill="#fffdfd" />
+      <Button fx:id="LeituraX" disable="true" layoutX="272.0" layoutY="592.0" mnemonicParsing="false" onAction="#eliminarItem" prefHeight="46.0" prefWidth="489.0" text="REMOVER ITEM" textAlignment="CENTER" textFill="#10a458" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="239.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="CancelarVenda" disable="true" layoutX="272.0" layoutY="640.0" mnemonicParsing="false" onAction="#cancelarVenda" prefHeight="46.0" prefWidth="492.0" text="CANCELAR VENDA" textFill="#068d5e" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="239.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="Pagamento" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="486.0" layoutY="46.0" mnemonicParsing="false" onAction="#SalvarVendas" prefHeight="39.0" prefWidth="275.0" text="EFECTUAR PAGAMENTO" textAlignment="CENTER" textFill="#09905f" AnchorPane.leftAnchor="486.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="46.0">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label layoutX="277.0" layoutY="92.0" prefHeight="23.0" prefWidth="18.0" text="ID" textFill="#f2eeee" />
+      <TextField fx:id="IdProduto" disable="true" editable="false" layoutX="295.0" layoutY="87.0" prefHeight="33.0" prefWidth="61.0" />
+      <Button fx:id="GerarFactura" disable="true" layoutX="276.0" layoutY="54.0" mnemonicParsing="false" onAction="#GerarFactura" prefHeight="37.0" prefWidth="220.0" text="EFECTUAR COBRANÇA" textFill="#0bcd83" AnchorPane.leftAnchor="272.0" AnchorPane.topAnchor="46.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

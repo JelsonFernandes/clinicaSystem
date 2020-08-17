@@ -1,0 +1,69 @@
+#Analises{
+    -fx-background-color:#8A2BE2;
+
+}
+#Analises:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Receitas{
+    -fx-background-color:#8A2BE2;
+
+}
+#Receitas:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Relatorio{
+    -fx-background-color:#8A2BE2;
+
+}
+#Relatorio:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Pesquisar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Pesquisar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Buscar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Buscar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+
+
+
+#Atualizar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Atualizar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+
+#SexoGroup{
+    -fx-background-color:#EE82EE;
+    -fx-border-color: purple;
+    -fx-border-width: 5px;
+
+}
+#SexoGroup:hover{
+    -fx-background-color:#00BFFF;
+     -fx-border-color: white;
+    -fx-border-width: 5px;
+
+}
+
+
+
+
+

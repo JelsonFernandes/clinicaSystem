@@ -1,0 +1,51 @@
+#Salvar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Salvar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Alterar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Alterar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Remover{
+    -fx-background-color:#8A2BE2;
+
+}
+#Remover:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Pesquisar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Pesquisar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#btnBuscar{
+    -fx-background-color:#8A2BE2;
+
+}
+#btnBuscar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+
+
+
+#btnAdicionar{
+    -fx-background-color:#8A2BE2;
+
+}
+#btnAdicionar:hover{
+    -fx-background-color:#00BFFF;
+
+}

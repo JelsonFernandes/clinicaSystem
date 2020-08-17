@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FFFAF0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.ServicosController">
+   <children>
+      <HBox layoutY="44.0" prefHeight="133.0" prefWidth="600.0" style="-fx-background-color: purple;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label layoutX="14.0" layoutY="59.0" prefHeight="22.0" prefWidth="23.0" text="ID" textFill="#fcfcfc" />
+      <Label layoutX="145.0" layoutY="62.0" prefHeight="17.0" prefWidth="68.0" text="SERVIÇOS" textFill="#fcfcfc" />
+      <Label layoutX="387.0" layoutY="62.0" prefHeight="17.0" prefWidth="46.0" text="VALOR" textFill="#fcfcfc" />
+      <TableView fx:id="TableViewServicos" layoutX="14.0" layoutY="209.0" onMouseClicked="#SetarCampos" prefHeight="165.0" prefWidth="572.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="123.0" text="ID" />
+          <TableColumn fx:id="SERVICOS" prefWidth="244.0" text="SERVIÇOS" />
+            <TableColumn fx:id="VALOR" prefWidth="204.0" text="VALOR" />
+        </columns>
+         <effect>
+            <ColorAdjust contrast="0.33" />
+         </effect>
+      </TableView>
+      <TextField fx:id="Pesquisar" layoutX="14.0" layoutY="143.0" onAction="#HandelerPreencherTabela" prefHeight="32.0" prefWidth="572.0" promptText="Digite Aqui a tua Pesquisa" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="540.0" layoutY="147.0">
+         <image>
+            <Image url="@../fotos/search.png" />
+         </image>
+      </ImageView>
+      <HBox layoutY="21.0" opacity="0.65" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: green;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <JFXTextField fx:id="codServico" layoutX="62.0" layoutY="58.0" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="tipoServico" layoutX="204.0" layoutY="58.0" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="valorServico" layoutX="444.0" layoutY="58.0" style="-fx-background-color: white;" />
+      <JFXButton fx:id="btnBuscar" layoutX="12.0" layoutY="175.0" onAction="#HandelerPreencherTabela" prefHeight="35.0" prefWidth="571.0" stylesheets="@../css/service.css" text="BUSCAR" textFill="#f8f8f8" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <ImageView layoutX="22.0" layoutY="174.0">
+         <image>
+            <Image url="@../fotos/search.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btPesquisar" alignment="CENTER_RIGHT" layoutX="154.0" layoutY="103.0" onAction="#HandelerBuscar" prefHeight="40.0" prefWidth="149.0" stylesheets="@../css/service.css" text="PESQUISAR" textFill="#f2efef">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btAlterar" alignment="CENTER_RIGHT" layoutX="294.0" layoutY="103.0" onAction="#HandelerAlterar" prefHeight="40.0" prefWidth="142.0" stylesheets="@../css/service.css" text="ALTERAR" textFill="#f2f2f2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btEliminar" alignment="CENTER_RIGHT" layoutX="431.0" layoutY="103.0" onAction="#handelerremover" prefHeight="40.0" prefWidth="156.0" stylesheets="@../css/service.css" text="ELIMINAR" textFill="#fcf9f9" AnchorPane.rightAnchor="13.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnAdicionar" alignment="CENTER_RIGHT" layoutX="12.0" layoutY="103.0" onAction="#HandelerSalvar" prefHeight="40.0" prefWidth="142.0" stylesheets="@../css/service.css" text="SALVAR" textFill="#f5f3f3">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="49.0" layoutX="13.0" layoutY="100.0">
+         <image>
+            <Image url="@../fotos/cadastro.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="448.0" layoutY="103.0">
+         <image>
+            <Image url="@../fotos/c9.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="164.0" layoutY="106.0">
+         <image>
+            <Image url="@../fotos/search.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="300.0" layoutY="103.0">
+         <image>
+            <Image url="@../fotos/c6.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

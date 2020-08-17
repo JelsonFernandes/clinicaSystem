@@ -1,0 +1,45 @@
+
+#btnsalvar{
+    -fx-background-color:#8A2BE2;
+
+}
+#btnsalvar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#btnPesquisar{
+    -fx-background-color:#8A2BE2;
+
+}
+#btnPesquisar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Alterar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Alterar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Remover{
+    -fx-background-color:#8A2BE2;
+
+}
+#Remover:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#Buscar{
+    -fx-background-color:#8A2BE2;
+
+}
+#Buscar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+
+
+
+

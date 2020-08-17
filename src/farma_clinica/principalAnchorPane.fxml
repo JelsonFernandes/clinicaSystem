@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="599.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.PrincipalAnchorPaneController">
+  <children>
+    <MenuBar prefHeight="43.0" prefWidth="985.0" style="-fx-background-color: #EE82EE;" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" style="-fx-background-image: url=@../fotos/c12.png;" text="CADASTRO">
+          <items>
+                  <MenuItem mnemonicParsing="false" onAction="#HandlerEmpresa" text="Empresa" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerMenuItemUsuario" text="USUÁRIO" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerPacientes" text="Pacientes" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerEnfermeiros" text="Enfermeiros" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerClientes" text="Clientes" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerFronecedor" text="Fornecedores" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerProdutos" text="Produtos" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerServicos" text="Serciços" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerFuncionarios" text="Funcionários" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="CONSULTAS">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#HandlerAgenda" text="Agenar Consulta" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerAtenderAgenda" text="Atender Consulta" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerConsultorio" text="Consultar" />
+            <MenuItem mnemonicParsing="false" onAction="#HandlerLaboratorio" text="Laboratório" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="FARMÁCIA">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#HandlerFarmacia" text="Ponto de Venda" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" onAction="#HandlerFactura" text="RELATÓRIOS">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="VISÃO">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#HandlercontroleClinica" text="RELATÓRIO ANUAL" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="NATALIDADE &amp; MORTALIDADE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#HandlercontroleNatalidade" text="Natalidade" />
+                  <MenuItem mnemonicParsing="false" onAction="#HandlercontroleMortalidade" text="Mortalidade" />
+                  <MenuItem mnemonicParsing="false" onAction="#HandlercontroleNatalMortalidade" text="Índece de Natalidade  &amp; mortalidade" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="AJUDA">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#HandlercontroleMainForm" text="TestePrincipal" />
+               </items>
+            </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512, 0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane prefHeight="552.0" prefWidth="237.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutY="-6.0" prefHeight="568.0" prefWidth="188.0" style="-fx-background-color: #ecbaed;" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="-6.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <HBox layoutX="257.0" layoutY="95.0" prefHeight="588.0" prefWidth="1030.0" AnchorPane.bottomAnchor="-29.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-797.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="jfxEnfermeiro" alignment="CENTER_RIGHT" layoutY="80.0" mnemonicParsing="false" onAction="#HandlerEnfermeiros" prefHeight="57.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="         ENFERMEIROS" textFill="#09902b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                        <Button fx:id="jfxFarmácia" alignment="CENTER_RIGHT" layoutY="276.0" mnemonicParsing="false" onAction="#HandlerFarmacia" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="FARMÁCIA" textFill="#09902b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                        <Button fx:id="jfxPacientes" alignment="CENTER_RIGHT" layoutY="212.0" mnemonicParsing="false" onAction="#HandlerPacientes" prefHeight="57.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="PACIENTES" textFill="#09902b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="jfxAgenda" alignment="CENTER_RIGHT" layoutY="339.0" mnemonicParsing="false" onAction="#HandlerAgenda" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="AGENDA" textFill="#09902b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="11.0" layoutY="83.0">
+                           <image>
+                              <Image url="@../fotos/doctor_female_icon-icons.com_75050.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="53.0" fitWidth="49.0" layoutX="11.0" layoutY="214.0">
+                           <image>
+                              <Image url="@../fotos/patient_male_icon-icons.com_75053.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="49.0" layoutX="11.0" layoutY="281.0">
+                           <image>
+                              <Image url="@../fotos/pharmacist_male_icon-icons.com_75055.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="49.0" layoutX="8.0" layoutY="341.0">
+                           <image>
+                              <Image url="@../fotos/businessapplication_edit_male_user_thepencil_theclient_negocio_2321.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="jfxUsuario" alignment="CENTER_RIGHT" layoutY="148.0" mnemonicParsing="false" onAction="#HandlerMedicos" prefHeight="57.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="MÉDICO" textFill="#09902b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <ImageView layoutX="11.0" layoutY="148.0">
+                           <image>
+                              <Image url="@../fotos/doctor_male_icon-icons.com_75051.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="CENTER_RIGHT" layoutY="15.0" mnemonicParsing="false" onAction="#HandlerMenuItemUsuario" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="USÁRIOS" textFill="#1e8a06" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <ImageView fitHeight="53.0" fitWidth="39.0" layoutX="13.0" layoutY="14.0" onMouseEntered="#HandlerMenuItemAction">
+                           <image>
+                              <Image url="@../fotos/c12.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="jfxFornecedor" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="402.0" mnemonicParsing="false" onAction="#HandlerFronecedor" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="FORNECEDORES" textFill="#09902b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="jfxClientes" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="462.0" mnemonicParsing="false" onAction="#HandlerClientes" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="CLIENTES" textFill="#09902b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="jfxAgenda111" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="522.0" mnemonicParsing="false" onAction="#HandlerFinancas" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="FINANÇAS" textFill="#09902b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="jfxAtender" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="587.0" mnemonicParsing="false" onAction="#HandlerAtenderAgenda" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: FFE4E1;" text="ATENDER CONSULTAS" textFill="#09902b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <ImageView fitHeight="38.0" fitWidth="66.0" layoutX="3.0" layoutY="410.0" AnchorPane.leftAnchor="0.0">
+                           <image>
+                              <Image url="@../fotos/fornecedor.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="11.0" layoutY="467.0" AnchorPane.leftAnchor="11.0">
+                           <image>
+                              <Image url="@../fotos/sellpoint.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="38.0" fitWidth="66.0" layoutX="3.0" layoutY="530.0" AnchorPane.leftAnchor="0.0">
+                           <image>
+                              <Image url="@../fotos/finança.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView layoutX="60.0" layoutY="285.0">
+                           <image>
+                              <Image url="@../fotos/sale.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+        </AnchorPane>
+        <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="401.0">
+          <content>
+            <AnchorPane id="Content" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="414.0">
+                     <children>
+                        <ImageView fitHeight="213.0" fitWidth="454.0" layoutX="-20.0" layoutY="-12.0" AnchorPane.leftAnchor="-20.0" AnchorPane.rightAnchor="-20.0">
+                           <image>
+                              <Image url="@../fotos/ClinicaHear12t.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="448.0" fitWidth="500.0" layoutX="-9.0" layoutY="201.0" style="-fx-background-color: FFE4E1;" AnchorPane.bottomAnchor="-94.0" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="-77.0">
+                           <image>
+                              <Image url="@../fotos/nurse-2141808_1920.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+            </AnchorPane>
+          </content>
+        </ScrollPane>
+        <AnchorPane prefHeight="313.0" prefWidth="111.0" style="-fx-background-color: white;">
+          <children>
+            <Label fx:id="jfxLabLogo" alignment="CENTER" layoutX="11.0" layoutY="14.0" prefHeight="99.0" prefWidth="128.0" style="&#10;" text="LOGO" textAlignment="CENTER" wrapText="false" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                <Font size="18.0" fx:id="x1" />
+                     </font>
+                     <textFill>
+                <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                     </textFill></Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="127.0" prefHeight="38.0" prefWidth="99.0" style="-fx-background-color: purple;" text="          NIF" textAlignment="CENTER" textFill="#f5f2f2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="jfxLabNif" alignment="CENTER" contentDisplay="CENTER" layoutY="165.0" prefHeight="38.0" prefWidth="133.0" text="       " textAlignment="CENTER" textFill="#3a10e4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="225.0" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: purple;" text="     CONTACTO" textAlignment="CENTER" textFill="#f5f2f2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="jfxLabContacto" layoutY="263.0" prefHeight="38.0" prefWidth="114.0" textFill="#340de4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="jfxLabWebsite" alignment="CENTER" contentDisplay="CENTER" layoutY="371.0" prefHeight="38.0" prefWidth="128.0" textAlignment="CENTER" textFill="#3a10e4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Arial Black" size="10.0" />
+                     </font></Label>
+                  <Label layoutX="5.0" layoutY="333.0" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: purple;" text="          WEBSITE" textAlignment="CENTER" textFill="#f5f2f2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="333.0" />
+                  <Label fx:id="jfxLabNome" alignment="CENTER" contentDisplay="CENTER" layoutY="474.0" prefHeight="38.0" prefWidth="133.0" textAlignment="CENTER" textFill="#3a10e4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Arial Black" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="436.0" prefHeight="38.0" prefWidth="133.0" style="-fx-background-color: purple;" text="EMPRESA" textAlignment="CENTER" textFill="#f5f2f2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="LabelUsuario" alignment="CENTER" contentDisplay="CENTER" layoutY="525.0" prefHeight="25.0" prefWidth="175.0" style="-fx-background-color: purple;" text="Label" textAlignment="CENTER" textFill="#eeeaea" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+          </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+        </AnchorPane>
+            <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="150.0" style="-fx-background-color: #ecbaed;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fitHeight="99.0" fitWidth="84.0" layoutX="29.0" layoutY="14.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0">
+                     <image>
+                        <Image url="@../fotos/CLINICAS.gif" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="jfxInfotokes" layoutX="-14.0" layoutY="413.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: FFE4E1;" text="INFOTOKES" textAlignment="CENTER" textFill="#07da54">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font></Button>
+                  <Label fx:id="jfxData" layoutX="-9.0" layoutY="483.0" prefHeight="57.0" prefWidth="168.0" style="-fx-background-color: FFE4E1;" text="                 Time                  " textFill="#0bae4c">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Button layoutX="-13.0" layoutY="353.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="175.0" />
+                  <ImageView fx:id="jfxTwiter" fitHeight="63.0" fitWidth="159.0" layoutX="-4.0" layoutY="350.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-10.0">
+                     <image>
+                        <Image url="@../fotos/twiter01.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="-6.0" layoutY="274.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="168.0" />
+                  <ImageView fitHeight="57.0" fitWidth="168.0" layoutX="-11.0" layoutY="270.0" onDragDetected="#jfxYoutube" AnchorPane.rightAnchor="-7.0">
+                     <image>
+                        <Image url="@../fotos/youtube.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="-2.0" layoutY="184.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="168.0" />
+                  <ImageView fitHeight="53.0" fitWidth="200.0" layoutX="-17.0" layoutY="196.0" onDragDetected="#jfxWatp" onMouseClicked="#jfxWatp" AnchorPane.leftAnchor="-17.0" AnchorPane.rightAnchor="-33.0">
+                     <image>
+                        <Image url="@../fotos/watup.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="-12.0" layoutY="120.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" />
+                  <ImageView fx:id="jfxFacebook" fitHeight="57.0" fitWidth="180.0" layoutX="-12.0" layoutY="117.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-24.0">
+                     <image>
+                        <Image url="@../fotos/facebook.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="112.0" prefHeight="72.0" prefWidth="159.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="-5.0" />
+               </padding>
+            </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="1000.0" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" style="-fx-background-color: green;" text="Left status" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="55.0" prefWidth="874.0" style="-fx-background-color: purple;" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" prefHeight="16.0" prefWidth="45.0" style="-fx-background-color: green;" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>

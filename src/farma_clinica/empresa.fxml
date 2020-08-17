@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="800.0" style="-fx-background-color: FFFAF0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.EmpresaController">
+   <children>
+      <HBox layoutX="14.0" layoutY="40.0" prefHeight="242.0" prefWidth="772.0" style="-fx-background-color: purple;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0" />
+      <Label layoutX="29.0" layoutY="90.0" prefHeight="24.0" prefWidth="23.0" text="ID" textFill="#fcfafa" />
+      <Label layoutX="164.0" layoutY="87.0" prefHeight="24.0" prefWidth="57.0" text="EMPRESA" textFill="#fcfafa" />
+      <Label layoutX="29.0" layoutY="177.0" prefHeight="17.0" prefWidth="93.0" text="REPRESENTANTE" textFill="#fcfafa" />
+      <Label layoutX="454.0" layoutY="94.0" prefHeight="17.0" prefWidth="23.0" text="NIF" textFill="#fcfafa" />
+      <Label layoutX="356.0" layoutY="177.0" prefHeight="17.0" prefWidth="68.0" text="ENDEREÇO" textFill="#fcfafa" />
+      <Label layoutX="581.0" layoutY="177.0" prefHeight="17.0" prefWidth="109.0" text="Nº FUNCIONÁRIOS" textFill="#fcfafa" />
+      <Label layoutX="29.0" layoutY="257.0" prefHeight="17.0" prefWidth="68.0" text="TELEFONE" textFill="#fcfafa" />
+      <Label layoutX="265.0" layoutY="257.0" prefHeight="17.0" prefWidth="57.0" text="E-MAIL" textFill="#fcfafa" />
+      <Label layoutX="486.0" layoutY="257.0" prefHeight="17.0" prefWidth="57.0" text="WEBSITE" textFill="#fcfafa" />
+      <TitledPane animated="false" layoutX="7.0" prefHeight="44.0" prefWidth="202.0" text="EMPRESA" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: green;" />
+        </content>
+      </TitledPane>
+      <JFXButton fx:id="SalvarEmpresa" layoutX="3.0" layoutY="282.0" onAction="#SalvarEmpresa" prefHeight="44.0" prefWidth="800.0" stylesheets="@../css/User.css" text="SALVAR" textFill="#f1f2f0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="36.0" fitWidth="49.0" layoutX="309.0" layoutY="287.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="735.0">
+         <image>
+            <Image url="@../fotos/cadastro.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="BuscarEmpres" layoutY="325.0" onAction="#BuscarEmpresa" prefHeight="36.0" prefWidth="800.0" stylesheets="@../css/User.css" text="BUSCAR" textFill="#f8f8f8" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="36.0" fitWidth="49.0" layoutX="308.0" layoutY="325.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="735.0">
+         <image>
+            <Image url="@../fotos/Pesquisar%20(2).png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="AlterarEmpresa" layoutX="15.0" layoutY="359.0" onAction="#AlterarEmpresa" prefHeight="36.0" prefWidth="785.0" stylesheets="@../css/User.css" text="EDITAR" textFill="#f8f5f5" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="36.0" fitWidth="49.0" layoutX="309.0" layoutY="359.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="735.0">
+         <image>
+            <Image url="@../fotos/c6.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="RemoverEmpresa" layoutX="3.0" layoutY="393.0" onAction="#handelerremover" prefHeight="44.0" prefWidth="800.0" stylesheets="@../css/User.css" text="REMOVER" textFill="#f5f3f3" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="36.0" fitWidth="49.0" layoutX="309.0" layoutY="395.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="735.0">
+         <image>
+            <Image url="@../fotos/c9.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="IdEmpresa" layoutX="51.0" layoutY="87.0" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: WHITE;" />
+      <JFXTextField fx:id="NomeEmpresa" layoutX="221.0" layoutY="87.0" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: WHITE;" />
+      <JFXTextField fx:id="NifEmpresa" layoutX="486.0" layoutY="87.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: WHITE;" />
+      <JFXTextField fx:id="RepresentanteEmpresa" layoutX="134.0" layoutY="173.0" prefHeight="25.0" prefWidth="212.0" style="-fx-background-color: WHITE;" />
+      <JFXTextField fx:id="EndeEmpres" layoutX="424.0" layoutY="173.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: WHITE;" />
+      <JFXTextField fx:id="NumFuncEmpresa" layoutX="703.0" layoutY="173.0" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: WHITE;" />
+      <JFXTextField fx:id="TelefoneEmpresa" layoutX="93.0" layoutY="253.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: WHITE;" />
+      <JFXTextField fx:id="EmaiEmpresa" layoutX="304.0" layoutY="253.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: WHITE;" />
+      <JFXTextField fx:id="WebEmpresa" layoutX="539.0" layoutY="253.0" prefHeight="25.0" prefWidth="228.0" style="-fx-background-color: WHITE;" />
+      <JFXTextField fx:id="ImageSourceChoose" layoutX="454.0" layoutY="54.0" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: white;" />
+      <ImageView fx:id="FotoEmpresa" fitHeight="75.0" fitWidth="93.0" layoutX="674.0" layoutY="53.0" onMouseClicked="#AddPicture" pickOnBounds="true">
+         <image>
+            <Image url="@../fotos/1491580635-yumminkysocialmedia26_83102.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

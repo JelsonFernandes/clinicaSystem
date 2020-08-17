@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma_clinica.ControlemorteController">
+   <children>
+      <HBox fx:id="HBPane" layoutX="29.0" layoutY="85.0" prefHeight="505.0" prefWidth="784.0" style="-fx-background-color: #6B8E23;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="40.0" />
+      <Label layoutX="14.0" layoutY="106.0" prefHeight="29.0" prefWidth="94.0" text=" PACIENTE" textFill="#f2edf1" />
+      <Label layoutX="319.0" layoutY="106.0" prefHeight="29.0" prefWidth="45.0" text="MÉDICO" textFill="#f2edf1" />
+      <Label layoutX="580.0" layoutY="106.0" prefHeight="29.0" prefWidth="68.0" text="ID AGENDA:" textFill="#f2edf1" />
+      <JFXTextField fx:id="Medico" layoutX="377.0" layoutY="108.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: FFFAF0;" unFocusColor="#d70c9a" />
+      <JFXTextField fx:id="NomePaciente" layoutX="74.0" layoutY="108.0" prefHeight="25.0" prefWidth="226.0" style="-fx-background-color: FFFAF0;" unFocusColor="#d70c9a" AnchorPane.rightAnchor="500.0" />
+      <JFXTextField fx:id="IdAgenda" layoutX="612.0" layoutY="108.0" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: FFFAF0;" unFocusColor="#d70c9a" AnchorPane.rightAnchor="15.0" />
+      <Label layoutX="14.0" layoutY="182.0" text="DATA DA MORTE:" textFill="#f2edf1" />
+      <JFXDatePicker fx:id="DataMorte" layoutX="117.0" layoutY="174.0" prefHeight="29.0" prefWidth="148.0" style="-fx-background-color: white;" />
+      <Label layoutX="265.0" layoutY="181.0" prefHeight="29.0" prefWidth="76.0" text="HORA DATA:" textFill="#f2edf1" />
+      <Label layoutX="430.0" layoutY="178.0" prefHeight="25.0" prefWidth="178.0" text="DATA DA PRIMEIRA CONSULTA:" textFill="#f2edf1" />
+      <JFXTextField fx:id="PrimeraConsulta" layoutX="616.0" layoutY="176.0" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: FFFAF0;" unFocusColor="#d70c9a" AnchorPane.rightAnchor="15.0" />
+      <Label layoutX="14.0" layoutY="249.0" prefHeight="25.0" prefWidth="53.0" text="QUEIXA:" textFill="#f2edf1" />
+      <Label layoutX="225.0" layoutY="253.0" prefHeight="17.0" prefWidth="95.0" text="DIAGONÓSTICO:" textFill="#f2edf1" />
+      <Label layoutX="553.0" layoutY="253.0" prefHeight="17.0" prefWidth="171.0" text="MEDICAÇÃO RECOMENDADA:" textFill="#f2edf1" />
+      <JFXTextArea fx:id="Queixa" layoutX="14.0" layoutY="270.0" prefHeight="77.0" prefWidth="208.0" style="-fx-background-color: FFFAF0;" unFocusColor="#cd05bc" />
+      <JFXTextArea fx:id="Diagnostico" layoutX="236.0" layoutY="270.0" prefHeight="77.0" prefWidth="262.0" style="-fx-background-color: FFFAF0;" unFocusColor="#cd05bc" />
+      <JFXTextArea fx:id="MedicacaoRecomendada" layoutX="508.0" layoutY="270.0" prefHeight="77.0" prefWidth="277.0" style="-fx-background-color: FFFAF0;" unFocusColor="#cd05bc" AnchorPane.rightAnchor="15.0" />
+      <Label layoutX="14.0" layoutY="356.0" prefHeight="25.0" prefWidth="110.0" text="QUANDO PIOROU:" textFill="#f2edf1" />
+      <Label layoutX="478.0" layoutY="360.0" text="TENTATIVAS DE REANIMAÇÃO:" textFill="#f2edf1" />
+      <JFXDatePicker fx:id="QuandoPiorou" layoutX="124.0" layoutY="356.0" style="-fx-background-color: FFFAF0;" />
+      <JFXTextArea fx:id="TentativaReanimacao" layoutX="481.0" layoutY="375.0" prefHeight="58.0" prefWidth="306.0" style="-fx-background-color: FFFAF0;" unFocusColor="#cd05bc" AnchorPane.rightAnchor="15.0" />
+      <TreeTableView fx:id="TableViewMortalidade" layoutX="18.0" layoutY="446.0" prefHeight="135.0" prefWidth="458.0" AnchorPane.leftAnchor="18.0">
+         <effect>
+            <SepiaTone level="0.11" />
+         </effect>
+      </TreeTableView>
+      <JFXTimePicker fx:id="HoraMorte" layoutX="341.0" layoutY="176.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: FFFAF0;" />
+      <JFXButton fx:id="Buscar" layoutX="15.0" layoutY="417.0" onAction="#preencherTabela" prefHeight="29.0" prefWidth="458.0" style="-fx-background-color: #DA70D6;" text="BUSCAR PACIENTE" textFill="#eee9e9" AnchorPane.leftAnchor="18.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="Pesquisar" layoutX="18.0" layoutY="384.0" onAction="#preencherTabela" prefHeight="30.0" prefWidth="458.0" promptText="Digite aqui a tua pesquisa" style="-fx-background-color: FFFAF0;" />
+      <JFXButton fx:id="btnPesquisar" layoutX="478.0" layoutY="451.0" onAction="#PesquisarDados" prefHeight="36.0" prefWidth="306.0" style="-fx-background-color: #DA70D6;" text="PESQUISAR" textFill="#f5f0f0" AnchorPane.rightAnchor="15.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnActualizar" layoutX="478.0" layoutY="496.0" onAction="#ActualizarDados" prefHeight="36.0" prefWidth="306.0" style="-fx-background-color: #DA70D6;" text="ACTUALIZAR" textFill="#f5f0f0" AnchorPane.rightAnchor="15.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnRemover" layoutX="478.0" layoutY="541.0" onAction="#Remover" prefHeight="36.0" prefWidth="306.0" style="-fx-background-color: #DA70D6;" text="REMOVER" textFill="#f5f0f0" AnchorPane.rightAnchor="15.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <TitledPane animated="false" depthTest="ENABLE" layoutX="7.0" layoutY="5.0" prefHeight="36.0" prefWidth="800.0" style="-fx-background-color: green;" text="CONTROLE DE MORTALIDADE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="18.0" prefWidth="798.0" style="-fx-background-color: green;" />
+        </content>
+         <effect>
+            <Bloom />
+         </effect>
+      </TitledPane>
+      <Label layoutX="14.0" layoutY="56.0" prefHeight="29.0" prefWidth="68.0" text="ID MORTE:" textFill="#f2edf1" />
+      <JFXTextField fx:id="IdMorte" layoutX="73.0" layoutY="58.0" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: FFFAF0;" unFocusColor="#d70c9a" />
+      <Label layoutX="279.0" layoutY="56.0" prefHeight="29.0" prefWidth="83.0" text="ID CONSULTA:" textFill="#f2edf1" />
+      <JFXTextField fx:id="IdConsulta" layoutX="362.0" layoutY="58.0" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: FFFAF0;" unFocusColor="#d70c9a" AnchorPane.rightAnchor="269.0" />
+      <Label layoutX="569.0" layoutY="59.0" prefHeight="25.0" prefWidth="45.0" text="DATA:" textFill="#f2edf1" />
+      <JFXTextField fx:id="Data" layoutX="614.0" layoutY="56.0" prefHeight="17.0" prefWidth="171.0" style="-fx-background-color: FFFAF0;" unFocusColor="#d70c9a" AnchorPane.rightAnchor="15.0" />
+   </children>
+</AnchorPane>

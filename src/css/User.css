@@ -1,0 +1,115 @@
+
+#btnsalvar{
+    -fx-background-color:#8A2BE2;
+
+}
+#btnpesquisar{
+    -fx-background-color:#8A2BE2;
+
+}
+#btnalterar{
+    -fx-background-color:#8A2BE2;
+
+}
+#btnRemover{
+    -fx-background-color:#8A2BE2;
+
+}
+#btnBuscar{
+    -fx-background-color:#8A2BE2; 
+
+}
+#btnsalvar:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnpesquisar:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnalterar:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnRemover:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#btnBuscar:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#SalvarEmpresa{
+    -fx-background-color:#8A2BE2;
+
+}
+#SalvarEmpresa:hover{
+    -fx-background-color:#00BFFF; 
+
+}
+#BuscarEmpres{
+    -fx-background-color:#8A2BE2;
+
+}
+#BuscarEmpres:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#AlterarEmpresa{
+    -fx-background-color:#8A2BE2;
+
+}
+#AlterarEmpresa:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#RemoverEmpresa{
+    -fx-background-color:#8A2BE2;
+
+}
+#RemoverEmpresa:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#SALVAR{
+    -fx-background-color:#8A2BE2;
+
+}
+#SALVAR:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#PESQUISAR{
+    -fx-background-color:#8A2BE2;
+
+}
+#PESQUISAR:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#ALTERAR{
+    -fx-background-color:#8A2BE2;
+
+}
+#ALTERAR:hover{
+    -fx-background-color:#00BFFF;
+
+}
+
+#REMOVER{
+    -fx-background-color:#8A2BE2;
+
+}
+#REMOVER:hover{
+    -fx-background-color:#00BFFF;
+
+}
+#btnBuscar{
+    -fx-background-color:#8A2BE2;
+
+}
+#btnBuscar:hover{
+    -fx-background-color:#00BFFF;
+
+}
+
