@@ -19,18 +19,17 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
-import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonBar.ButtonData;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -180,12 +179,7 @@ public class Laboratorio1Controller implements Initializable {
             Observacao.setText(null);
 
         } catch (SQLException ex) {
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro");
-            alert.setHeaderText("Atenção!!!");
-            alert.setContentText("Erro:\n" + ex);
-            alert.show();
+            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
 
     }
@@ -204,11 +198,7 @@ public class Laboratorio1Controller implements Initializable {
             }
 
         } catch (SQLException ex) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro");
-            alert.setHeaderText("Atenção!!!");
-            alert.setContentText("Erro:\n" + ex);
-            alert.show();
+           JOptionPane.showMessageDialog(null,"Erro:\n"+ex,"Atenção!",JOptionPane.ERROR_MESSAGE);
         }
 
         ID.setCellValueFactory(new PropertyValueFactory<>("Id"));
@@ -235,37 +225,19 @@ public class Laboratorio1Controller implements Initializable {
         try {
             conexao = ModeloConexao.conector();
 
-            
-            Alert alert = new Alert(Alert.AlertType.NONE);
-            alert.setTitle("Alerta");
-            alert.setHeaderText("Atenção!!!");
-            alert.setContentText("Confirma o cancelamento desta analize?");
-            ButtonType botaoSim = new ButtonType("Sim");
-            ButtonType botaoNao = new ButtonType("Não", ButtonData.CANCEL_CLOSE);
-            alert.getButtonTypes().addAll(botaoSim, botaoNao);
-            Optional<ButtonType> opcao = alert.showAndWait();
-
-            if (opcao.get() == botaoSim) {
+            int confirma = JOptionPane.showConfirmDialog(null, "Confirma o cancelamento desta analize?", "Atenção!", JOptionPane.YES_NO_OPTION);
+            if (confirma == JOptionPane.YES_OPTION) {
                 String sql = "delete from analiseinsets where analise=? and id_analise=?";
                 pst = conexao.prepareStatement(sql);
                 pst.setString(1, Analise.getText());
                 pst.setString(2, codAnalise.getText());
                 pst.execute();
-
-                Alert alert1 = new Alert(Alert.AlertType.CONFIRMATION);
-                alert1.setTitle("Erro");
-                alert1.setHeaderText("Atenção!!!");
-                alert1.setContentText("Cancelado com sucesso");
-                alert1.show();
+                JOptionPane.showMessageDialog(null, "Cancelado com sucesso");
 
             }
 
         } catch (SQLException ex) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro");
-            alert.setHeaderText("Atenção!!!");
-            alert.setContentText("Erro:\n" + ex);
-            alert.show();
+            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
 
     }
@@ -273,50 +245,26 @@ public class Laboratorio1Controller implements Initializable {
     @FXML
     public void deletarAnlise(javafx.event.ActionEvent event) {
         conexao = ModeloConexao.conector();
-
-        Alert alert = new Alert(Alert.AlertType.NONE);
-        alert.setTitle("Alerta");
-        alert.setHeaderText("Atenção!!!");
-        alert.setContentText("Confirma o cancelamento desta analize?");
-        ButtonType botaoSim = new ButtonType("Sim");
-        ButtonType botaoNao = new ButtonType("Não", ButtonData.CANCEL_CLOSE);
-        alert.getButtonTypes().addAll(botaoSim, botaoNao);
-        Optional<ButtonType> opcao = alert.showAndWait();
-
-        if (opcao.get() == botaoSim) {
+        int confirma = JOptionPane.showConfirmDialog(null, "Confirma o cancelamento desta analize?", "Atenção!", JOptionPane.YES_NO_OPTION);
+        if (confirma == JOptionPane.YES_OPTION) {
             try {
                 String sql = "delete from analise where id_analise=?";
                 pst = conexao.prepareStatement(sql);
                 pst.setString(1, codAnalise.getText());
                 pst.execute();
             } catch (SQLException ex) {
-
-                Alert alert1 = new Alert(Alert.AlertType.ERROR);
-                alert1.setTitle("Erro");
-                alert1.setHeaderText("Atenção!!!");
-                alert1.setContentText("Erro:\n" + ex);
-                alert1.show();
+                JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
             }
-      
+        }
         try {
             String sql = "delete from analiseinsets where id_analise=?";
             pst = conexao.prepareStatement(sql);
             pst.setString(1, codAnalise.getText());
             pst.execute();
-
-            Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
-            alert2.setTitle("Confirmaão");
-            alert2.setHeaderText("Atenção!!!");
-            alert2.setContentText("Análises removidas com sucesso");
-            alert2.show();
+            JOptionPane.showMessageDialog(null, "Análises removidas com sucesso");
         } catch (SQLException ex) {
-            Alert alert3 = new Alert(Alert.AlertType.ERROR);
-            alert3.setTitle("Erro");
-            alert3.setHeaderText("Atenção!!!");
-            alert3.setContentText("Erro:\n" + ex);
-            alert3.show();
+            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
-          }
 
     }
 
@@ -334,12 +282,7 @@ public class Laboratorio1Controller implements Initializable {
             }
 
         } catch (SQLException ex) {
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro");
-            alert.setHeaderText("Atenção!!!");
-            alert.setContentText("Erro:\n" + ex);
-            alert.show();
+            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
         ID2.setCellValueFactory(new PropertyValueFactory<>("cod"));
         NOME.setCellValueFactory(new PropertyValueFactory<>("nome"));
@@ -372,11 +315,7 @@ public class Laboratorio1Controller implements Initializable {
             }
 
         } catch (SQLException ex) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro");
-            alert.setHeaderText("Atenção!!!");
-            alert.setContentText("Erro:\n" + ex);
-            alert.show();
+            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
         ID3.setCellValueFactory(new PropertyValueFactory<>("cod"));
         NOME3.setCellValueFactory(new PropertyValueFactory<>("nome"));
@@ -428,11 +367,7 @@ public class Laboratorio1Controller implements Initializable {
             BuscamMedico.setDisable(false);
 
         } catch (SQLException ex) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro");
-            alert.setHeaderText("Atenção!!!");
-            alert.setContentText("Erro:\n" + ex);
-            alert.show();
+            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
 
     }
@@ -450,39 +385,22 @@ public class Laboratorio1Controller implements Initializable {
             pst.setString(4, Data.getText());
             pst.setString(5, codAnalise.getText());
             pst.execute();
-
-            Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
-            alert2.setTitle("Aviso");
-            alert2.setHeaderText("Atenção!!!");
-            alert2.setContentText("Análise finalizada com sucesso");
-            alert2.show();
+            JOptionPane.showMessageDialog(null, "Análise finalizada com sucesso");
             //´Método para Chamar o relatório
-
-            Alert alert1 = new Alert(Alert.AlertType.NONE);
-            alert1.setTitle("Aviso");
-            alert1.setHeaderText("Atenção!!!");
-            alert1.setContentText("Confirma a Impressão deste Boletim?");
-            ButtonType botaoSim = new ButtonType("Sim");
-            ButtonType botaoNao = new ButtonType("Não", ButtonData.CANCEL_CLOSE);
-            alert1.getButtonTypes().addAll(botaoSim, botaoNao);
-            Optional<ButtonType> opcao = alert1.showAndWait();
-            if (opcao.get() == botaoSim) {
-                try {
-                    HashMap filtro = new HashMap();
-                    filtro.put("codigo", (codAnalise.getText()));
+             int comfirma = JOptionPane.showConfirmDialog(null, "Confirma a Impressão deste Boletim?", "Atenção", JOptionPane.YES_NO_OPTION);
+        if (comfirma == JOptionPane.YES_OPTION) {
+            try {
+                HashMap filtro = new HashMap();
+                filtro.put("codigo", ( codAnalise.getText()));
 //                 filtro.put("id_nota", Integer.parseInt(idnota.getText()));
-
-                    JasperPrint print = JasperFillManager.fillReport("src\\Relatorios\\Analise.jasper", filtro, conexao);
-                    JasperViewer.viewReport(print, false);
-                } catch (Exception ex) {
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Erro");
-                    alert.setHeaderText("Atenção!!!");
-                    alert.setContentText("Erro:\n" + ex);
-                    alert.show();
-                }
+                
+                JasperPrint print = JasperFillManager.fillReport("src\\Relatorios\\Analise.jasper", filtro, conexao);
+                JasperViewer.viewReport(print, false);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e);
             }
-
+        }
+            
             ///////////////////////////////////////////////////////////////
             Paciente.setDisable(true);
             Medico.setDisable(true);
@@ -502,11 +420,7 @@ public class Laboratorio1Controller implements Initializable {
             TableAnalise.setItems(null);
 
         } catch (SQLException ex) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro");
-            alert.setHeaderText("Atenção!!!");
-            alert.setContentText("Erro:\n" + ex);
-            alert.show();
+            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
 
     }
